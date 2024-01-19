@@ -180,7 +180,7 @@ class Scratch:
       self.age = scratch_load["age"]
       self.innate = scratch_load["innate"]
       self.learned = scratch_load["learned"]
-      self.currently = scratch_load["currently"]
+      self.currently = scratch_load["currently"] #FIXME add input
       self.lifestyle = scratch_load["lifestyle"]
       self.living_area = scratch_load["living_area"]
 
