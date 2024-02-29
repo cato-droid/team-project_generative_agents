@@ -10,6 +10,7 @@ import sys
 sys.path.append('../../')
 
 from global_methods import *
+from persona.prompt_template.run_gpt_prompt import *
 
 class Scratch: 
   def __init__(self, f_saved, currently_input): #FIXME input to be added to currently when starting the sim 
@@ -180,7 +181,22 @@ class Scratch:
       self.age = scratch_load["age"]
       self.innate = scratch_load["innate"]
       self.learned = scratch_load["learned"]
-      self.currently = scratch_load["currently"] + currently_input #FIXME add input
+      #self.currently = scratch_load["currently"] + currently_input #FIXME add input
+      #FIXME give input to llm to reformulate and include into the existing "currently"
+
+      currently_prompt = f"Given {self.first_name} {self.last_name}'s current status:\n"
+      currently_prompt += scratch_load["currently"] + "\n\n"
+      currently_prompt += f"and someone wanting them to do this:\n"
+      currently_prompt += f"{currently_input}\n"
+      currently_prompt += f"Add them doing whatever that person wants them to do to their status. Write this in third-person talking about {self.first_name} {self.last_name}. "
+      currently_prompt += f"If there is any scheduling information, be as specific as possible (include date, time, and location if stated in the statement).\n\n"
+      currently_prompt += "Follow this format below:\nStatus: <new status>"
+      print(currently_prompt)
+      new_currently = ChatGPT_single_request(currently_prompt)
+      print(new_currently)
+      self.currently = new_currently
+
+
       self.lifestyle = scratch_load["lifestyle"]
       self.living_area = scratch_load["living_area"]
 
