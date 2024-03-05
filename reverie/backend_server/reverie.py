@@ -124,7 +124,7 @@ class ReverieServer:
     for persona_name in reverie_meta['persona_names']: 
 
       #FIXME add prompt for every persona to add stuff to their "currently"
-      currently_input = input("What do you want " + persona_name +" to be working on currently?: ").strip()
+      currently_input = input("What do you want " + persona_name +" to be working on?: ").strip()
 
 
       persona_folder = f"{sim_folder}/personas/{persona_name}"
@@ -614,7 +614,6 @@ if __name__ == '__main__':
 
   origin = input("Enter the name of the forked simulation: ").strip()
   target = input("Enter the name of the new simulation: ").strip()
-  #FIXME add prompts to add tasks for each character in a simulation?
 
   rs = ReverieServer(origin, target)
   rs.open_server()
