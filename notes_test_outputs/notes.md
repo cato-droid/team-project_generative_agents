@@ -73,7 +73,7 @@ added prompt for every person, so the user can give them tasks.
 (inspired by prompts in plan.py)
 The prompt and the current status of the person then gets fed to the llm for it to make a new entry for currently.
 -> That doesn't totally work at the moment. The output the llm gives, doesn't match the previous style from entries in currently. It's somehow cut off and doesn't always include everything we want (maybe bc it's cut off). Sometimes it's also not only the stuff we asked for/not in 3rd person/ ...
--> see e.g. in tests_04_03_2024
+-> see e.g. in tests_04_03_2024 - tests_6_3_24
 -also: do we want to replace the currently from before, so the agent is only currently working on the task given by the user?
 
 FIXME
@@ -82,13 +82,46 @@ trying to run the simulation on the remote server from haoyu:
 -ssh -L gives: channel 3: open failed: connect failed: Connection refused
 -> solution: add specific url after runserver that can be accessed from outside:
 https://docs.djangoproject.com/en/1.11/ref/django-admin/#runserver
-...
+python manage.py runserver 134.2.56.203:8000
 -that ip needs to be added to ALLOWED_HOSTS in the Django settings
 
 -problem that still occurs: we can only load the simulator_home once. Refreshing the page after the simulation has started, gives us:
 Please start the backend first. 
 (which is already running)
 -> backend gets somehow stopped by that request (doesn't terminate, but gets "stuck" -> no further computations/prompts)
+-> also if we look at the output of the frontend server: a HTTP GET stops the HTTP POSTs:
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "GET /simulator_home HTTP/1.1" 200 1374
+-> here I refreshed the simulator_home
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:33] "GET /simulator_home HTTP/1.1" 200 1374
+[06/Mar/2024 16:01:45] "GET /simulator_home HTTP/1.1" 200 1374
+-> refreshing the simulator home again two times
+-> no more POSTs
 
 
 
