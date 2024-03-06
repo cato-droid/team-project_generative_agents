@@ -186,7 +186,7 @@ class Scratch:
 
       currently_prompt = f"Given what {self.first_name} {self.last_name} is up to currently:\n"
       currently_prompt += scratch_load["currently"] + "\n\n"
-      currently_prompt += f"add this to it in the same style (talking about them in the third person) and give my back only that finished text\n"
+      currently_prompt += f"add this to it in the same style (talking about them in the third person) and give me back only that new text:\n"
       currently_prompt += f"{currently_input}\n\n"
       print(currently_prompt)
       new_currently = ChatGPT_single_request(currently_prompt)
