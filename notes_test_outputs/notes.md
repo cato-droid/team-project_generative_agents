@@ -123,6 +123,11 @@ Please start the backend first.
 -> refreshing the simulator home again two times
 -> no more POSTs
 
+-> fixed by commenting out the line:
+os.remove(f_curr_step) from views.py
+-> now we can refresh the page, look at agents and go back to the
+still viewable simulator_home
+
 
 
 
