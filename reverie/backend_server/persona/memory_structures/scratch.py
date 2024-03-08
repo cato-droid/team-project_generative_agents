@@ -191,7 +191,9 @@ class Scratch:
       print(currently_prompt)
       new_currently = ChatGPT_single_request(currently_prompt)
       print(new_currently)
-      self.currently = new_currently
+      #self.currently = new_currently
+      #FIXME old version:
+      self.currently = scratch_load["currently"]
 
 
       self.lifestyle = scratch_load["lifestyle"]
