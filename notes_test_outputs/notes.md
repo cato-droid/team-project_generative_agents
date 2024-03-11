@@ -129,6 +129,14 @@ os.remove(f_curr_step) from views.py
 still viewable simulator_home
 
 
+-with the updated currently, it got an error when trying to build the emojis for something Isabella is doing
+-> stops there
+-we haven't yet gotten to the point where the actual simulation started
+-> try how far it runs with the old currently by running it overnight
+
+-hundreds of post requests per second are empty?
+->are maybe animation frames, but empty currently because animation hasn't started yet
+
 
 
 
