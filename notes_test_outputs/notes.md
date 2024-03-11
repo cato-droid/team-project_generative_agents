@@ -142,8 +142,9 @@ still viewable simulator_home
 
 Tasks for later
 
-- split llm from the rest of the code and run it on the ssh server
+-switch to most powerful gpt4all model possible
+-try to use gpu
 
-- try a faster llm that uses CPU instead of GPT4all
+- split llm from the rest of the code and run it on the ssh server
 
 
