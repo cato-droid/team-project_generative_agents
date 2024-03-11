@@ -145,6 +145,9 @@ Tasks for later
 -switch to most powerful gpt4all model possible
 -try to use gpu
 
+->no gpu support for gpt4all yet
+-> tried to use mlcllm, but failed to run it
+
 - split llm from the rest of the code and run it on the ssh server
 
 
