@@ -133,21 +133,27 @@ still viewable simulator_home
 -> stops there
 -we haven't yet gotten to the point where the actual simulation started
 -> try how far it runs with the old currently by running it overnight
+-> problem: runs into errors most of the time because of something the llm put out,
+that doesn't really fit what we asked for
 
 -hundreds of post requests per second are empty?
 ->are maybe animation frames, but empty currently because animation hasn't started yet
 
+-warning because of http-site (not https) -> does that cause problems?
 
 
-
-Tasks for later
 
 -switch to most powerful gpt4all model possible
 -try to use gpu
 
 ->no gpu support for gpt4all yet
 -> tried to use mlcllm, but failed to run it
+-> now trying to implement llama2 with gpu
 
+
+Tasks for later
+-switch to most powerful gpt4all model possible
+-try to use gpu
 - split llm from the rest of the code and run it on the ssh server
 
 
