@@ -8,7 +8,7 @@ Description: Wrapper functions for calling LLama2 APIs.
 """
 import json
 import time 
-from litellm import completion
+from litellm import * 
 
 from utils import *
 
