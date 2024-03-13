@@ -12,16 +12,17 @@ from litellm import completion
 
 from utils import *
 
-model="meta-llama/Llama-2-7b-hf"
-
 def temp_sleep(seconds=0.1):
   time.sleep(seconds)
 
 def ChatGPT_single_request(prompt): 
   temp_sleep()
 
-  output = model.generate(prompt, max_tokens=max_tokens)
-  return output
+  completion = litellm.ChatCompletion.create(
+    model="meta-llama/Llama-2-7b-hf", 
+    messages=[{"role": "user", "content": prompt}]
+  )
+  return completion["choices"][0]["message"]["content"]
 
 # ============================================================================
 # #####################[SECTION 1: CHATGPT4All STRUCTURE] ######################
