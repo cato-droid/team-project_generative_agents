@@ -1,19 +1,18 @@
 """
-Author: 
-Cassini Saturn (0xcassini@gmail.com)
+Authors: 
 Joon Sung Park (joonspk@stanford.edu)
+Cato Kurtz (cato.kurtz@student.uni-tuebingen.de)
 
 File: gpt_structure.py
-Description: Wrapper functions for calling GPT4All APIs.
+Description: Wrapper functions for calling LLama2 APIs.
 """
 import json
 import time 
+from litellm import completion
 
 from utils import *
 
-from gpt4all import GPT4All, Embed4All
-
-model = GPT4All(gpt4all_model)
+model="meta-llama/Llama-2-7b-hf"
 
 def temp_sleep(seconds=0.1):
   time.sleep(seconds)
