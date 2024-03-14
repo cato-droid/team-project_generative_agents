@@ -8,7 +8,7 @@ Description: Wrapper functions for calling LLama2 APIs.
 """
 import json
 import time 
-from litellm import * 
+from litellm import completion 
 
 from utils import *
 
@@ -18,11 +18,12 @@ def temp_sleep(seconds=0.1):
 def ChatGPT_single_request(prompt): 
   temp_sleep()
 
-  completion = litellm.ChatCompletion.create(
+  response = completion(
     model="meta-llama/Llama-2-7b-hf", 
-    messages=[{"role": "user", "content": prompt}]
+    messages=[{"role": "user", "content": prompt}],
+    api_base="http://134.2.56.203:11434"
   )
-  return completion["choices"][0]["message"]["content"]
+  return response["choices"][0]["message"]["content"]
 
 # ============================================================================
 # #####################[SECTION 1: CHATGPT4All STRUCTURE] ######################
