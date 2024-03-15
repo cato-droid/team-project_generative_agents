@@ -148,8 +148,12 @@ that doesn't really fit what we asked for
 
 ->no gpu support for gpt4all yet
 -> tried to use mlcllm, but failed to run it
+
 -> now trying to implement llama2 with gpu
 -> trying to implement it with litellm
+-> need to rum llama2/ollama on a server?
+-> how do we actually get the model and run it on a server
+so we can then access it from the gpt_structure?
 
 
 Tasks for later
