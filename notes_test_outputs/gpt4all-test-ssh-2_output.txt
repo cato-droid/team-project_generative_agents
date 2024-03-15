@@ -1,0 +1,1155 @@
+
+
+ran it again to get a schedule, where isabella isn't in bed all the time
+
+(venv) team_project@AVGdesktop:~/cato/team-project_generative_agents/reverie/backend_server$ python reverie.py
+Found model file at  /home/team_project/.cache/gpt4all/orca-mini-3b.ggmlv3.q4_0.bin
+llama.cpp: loading model from /home/team_project/.cache/gpt4all/orca-mini-3b.ggmlv3.q4_0.bin
+llama_model_load_internal: format     = ggjt v3 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 2048
+llama_model_load_internal: n_embd     = 3200
+llama_model_load_internal: n_mult     = 240
+llama_model_load_internal: n_head     = 32
+llama_model_load_internal: n_layer    = 26
+llama_model_load_internal: n_rot      = 100
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 8640
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 3B
+llama_model_load_internal: ggml ctx size =    0.06 MB
+llama_model_load_internal: mem required  = 2862.72 MB (+  682.00 MB per state)
+llama_new_context_with_model: kv self size  =  650.00 MB
+Enter the name of the forked simulation: base_the_ville_isabella_maria_klaus
+Enter the name of the new simulation: gpt4all-test-ssh-2
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option: run 2500
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+Found model file at  /home/team_project/.cache/gpt4all/ggml-all-MiniLM-L6-v2-f16.bin
+GNS FUNCTION: <generate_wake_up_hour>
+=== persona/prompt_template/v2/wake_up_hour_v1.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-002', 'max_tokens': 5, 'temperature': 0.8, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+["Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", 'Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.', 'Isabella']
+
+~~~ prompt    ----------------------------------------------------
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+In general, Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Isabella's wake up hour:
+
+~~~ output    ----------------------------------------------------
+6
+
+=== END ==========================================================
+
+
+
+
+GNS FUNCTION: <generate_first_daily_plan>
+=== persona/prompt_template/v2/daily_planning_v6.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 500, 'temperature': 1, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': None}
+
+~~~ prompt_input    ----------------------------------------------
+["Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", 'Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.', 'Monday February 13', 'Isabella', '6:00 am']
+
+~~~ prompt    ----------------------------------------------------
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+In general, Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Today is Monday February 13. Here is Isabella's plan today in broad-strokes (with the time of the day. e.g., have a lunch at 12:00 pm, watch TV from 7 to 8 pm): 1) wake up and complete the morning routine at 6:00 am, 2)
+
+~~~ output    ----------------------------------------------------
+['wake up and complete the morning routine at 6:00 am']
+
+=== END ==========================================================
+
+
+
+
+GNS FUNCTION: <generate_hourly_schedule>
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:b9rL5m) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:ZxjOJs) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:PjQNoY) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:dpS5nK) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:caDflp) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:I3Ar8S) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:LMZIxW) Monday February 13 -- 06:00 AM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:b9rL5m) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:ZxjOJs) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:PjQNoY) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:dpS5nK) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:caDflp) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:I3Ar8S) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:LMZIxW) Monday February 13 -- 06:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:5Oluz1) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:HV9E4L) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:MFTa0h) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:P1sT5c) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:aGv4EO) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:bKoIe0) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:nnKeyo) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:3LSbyf) Monday February 13 -- 07:00 AM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:5Oluz1) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:HV9E4L) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:MFTa0h) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:P1sT5c) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:aGv4EO) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:bKoIe0) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:nnKeyo) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:3LSbyf) Monday February 13 -- 07:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:oYVwoa) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:MJkJgy) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:Q9VdYe) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:9UX8uJ) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:CTV6DT) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:gF8NeN) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:UHQkkb) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:0cEJHk) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:hCXK36) Monday February 13 -- 08:00 AM] Activity: Isabella is']
+
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:oYVwoa) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:MJkJgy) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:Q9VdYe) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:9UX8uJ) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:CTV6DT) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:gF8NeN) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:UHQkkb) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:0cEJHk) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:hCXK36) Monday February 13 -- 08:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:dNEwdF) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:k6IDZs) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:8rDvpL) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:i0vUsv) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:pG4w3v) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:0smF29) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:fCy0Mw) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:6QIY1r) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:CTr4E0) Monday February 13 -- 09:00 AM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:dNEwdF) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:k6IDZs) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:8rDvpL) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:i0vUsv) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:pG4w3v) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:0smF29) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:fCy0Mw) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:6QIY1r) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:CTr4E0) Monday February 13 -- 09:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:avpRp4) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:nIs6TJ) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:bYeUKb) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:aozTeX) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:iKSX2M) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:EcoIji) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:kd9wXF) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:aRioSs) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:XH2fKw) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:iLuSi0) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:c0OO6u) Monday February 13 -- 10:00 AM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:avpRp4) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:nIs6TJ) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:bYeUKb) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:aozTeX) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:iKSX2M) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:EcoIji) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:kd9wXF) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:aRioSs) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:XH2fKw) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:iLuSi0) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:c0OO6u) Monday February 13 -- 10:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:OLsdD1) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:jypObg) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:HMFKOi) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:nxIUZ9) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:7cVk6Q) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:yffD4G) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:stNR4W) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:XktGPH) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:LyHzd7) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:fg12su) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:U4eRjJ) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:wMCVak) Monday February 13 -- 11:00 AM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:OLsdD1) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:jypObg) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:HMFKOi) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:nxIUZ9) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:7cVk6Q) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:yffD4G) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:stNR4W) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:XktGPH) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:LyHzd7) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:fg12su) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:U4eRjJ) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:wMCVak) Monday February 13 -- 11:00 AM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:TlgjTV) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:R3WgLt) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:NQIYs0) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:4EvjDD) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:BSqIH3) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:O5dO9A) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:yyWZ29) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:aqWXjC) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:ZautyG) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:uum7s9) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:ysFcUA) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:cOHlYi) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:ozwCSk) Monday February 13 -- 12:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:TlgjTV) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:R3WgLt) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:NQIYs0) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:4EvjDD) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:BSqIH3) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:O5dO9A) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:yyWZ29) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:aqWXjC) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:ZautyG) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:uum7s9) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:ysFcUA) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:cOHlYi) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:ozwCSk) Monday February 13 -- 12:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:n3v7s5) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:gjpuxi) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:W773k6) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:GCIsyf) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:9XRjn6) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:l9RNng) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:7h1K5y) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:yWh6VS) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:6ogtUs) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:QSLb6x) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:k3ciG4) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:c9Y1fY) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:7YDShJ) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:wcdujq) Monday February 13 -- 01:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:n3v7s5) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:gjpuxi) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:W773k6) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:GCIsyf) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:9XRjn6) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:l9RNng) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:7h1K5y) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:yWh6VS) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:6ogtUs) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:QSLb6x) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:k3ciG4) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:c9Y1fY) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:7YDShJ) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:wcdujq) Monday February 13 -- 01:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:ywtBgV) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:zgKLY9) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:9T4bBB) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:xFsTsi) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:zPKAFQ) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:3BnI24) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:wJy7Iq) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:i3DVaG) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:sB0cA8) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:ON0qu3) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:aqJZVm) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:rjTPZm) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:KIfKL6) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n[(ID:KqNfO1) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:s7ZJvu) Monday February\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:ZVHf9a) Monday February 13 -- 02:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:ywtBgV) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:zgKLY9) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:9T4bBB) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:xFsTsi) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:zPKAFQ) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:3BnI24) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:i3DVaG) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:sB0cA8) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:ON0qu3) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:aqJZVm) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:rjTPZm) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:KIfKL6) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+[(ID:KqNfO1) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:ZVHf9a) Monday February 13 -- 02:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+working at the counter
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:R6BVdA) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:mPKkdx) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:Xgw0eX) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:T4Pmru) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:teRPkf) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:1YJWYY) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:vLBxP6) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:IhY0Z7) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:yoFTqb) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:QdFiGY) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:lnrmVA) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:gtnu4L) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:91P7pw) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n[(ID:Tm95ZV) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:s7ZJvu) Monday February\n[(ID:lanPQ4) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n[(ID:wJy7Iq) Monday February\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:H1AR0v) Monday February 13 -- 03:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:R6BVdA) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:mPKkdx) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:Xgw0eX) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:T4Pmru) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:teRPkf) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:1YJWYY) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:vLBxP6) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:IhY0Z7) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:yoFTqb) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:QdFiGY) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:lnrmVA) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:gtnu4L) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:91P7pw) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+[(ID:Tm95ZV) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+[(ID:lanPQ4) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:H1AR0v) Monday February 13 -- 03:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE) Monday February
+
+=== END ==========================================================
+
+
+
+
+^CException ignored on calling ctypes callback function: <function LLModel._prompt_callback at 0x7f893d143760>
+Traceback (most recent call last):
+  File "/home/team_project/cato/team-project_generative_agents/venv/lib/python3.10/site-packages/gpt4all/pyllmodel.py", line 393, in _prompt_callback
+    @staticmethod
+KeyboardInterrupt:
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:9qrO4v) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:au2jIw) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:YwcAGH) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:V1jBTt) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:osNgz8) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:NxTDit) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:BbsnwW) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:arI7Z1) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:qMei7d) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:oaHQ3D) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:nD6m2q) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:zVLbrT) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:FSZnyp) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n[(ID:nWUnu4) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:s7ZJvu) Monday February\n[(ID:gsDtcn) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n[(ID:wJy7Iq) Monday February\n[(ID:Ys6AXi) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE) Monday February\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:6BP5Ej) Monday February 13 -- 04:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:9qrO4v) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:au2jIw) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:YwcAGH) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:V1jBTt) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:osNgz8) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:NxTDit) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:BbsnwW) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:arI7Z1) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:qMei7d) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:oaHQ3D) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:nD6m2q) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:zVLbrT) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:FSZnyp) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+[(ID:nWUnu4) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+[(ID:gsDtcn) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February
+[(ID:Ys6AXi) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE) Monday February
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:6BP5Ej) Monday February 13 -- 04:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:E4yCkR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:0Kd5H2) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:2ETBu4) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:nf0tBM) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:W9mD8L) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:BzSUg8) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:CxE4mW) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:cKO2s2) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:gEHnVD) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:APM2xT) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:C1DqIP) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:n8eXzr) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:xo1g5v) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n[(ID:CRuXl0) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:s7ZJvu) Monday February\n[(ID:OyXpXw) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n[(ID:wJy7Iq) Monday February\n[(ID:64SR2Z) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE) Monday February\n[(ID:q9jOF1) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:jdZMFT) Monday February 13 -- 05:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:E4yCkR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:0Kd5H2) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:2ETBu4) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:nf0tBM) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:W9mD8L) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:BzSUg8) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:CxE4mW) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:cKO2s2) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:gEHnVD) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:APM2xT) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:C1DqIP) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:n8eXzr) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:xo1g5v) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+[(ID:CRuXl0) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+[(ID:OyXpXw) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February
+[(ID:64SR2Z) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE) Monday February
+[(ID:q9jOF1) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:jdZMFT) Monday February 13 -- 05:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+[(ID:pxL8gE) Monday February 13 -- 06:00 AM] Activity: Isabella is working at the counter
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']}
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', "Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n", '\n[(ID:yImesR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:6j0ifK) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:F64QTm) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:6XEE6p) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:RP7ENL) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:ka074q) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:2RGtsz) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:kkNXwu) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter\n[(ID:ZuNC0j) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter\n[(ID:SdvPPq) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter\n2) prepare breakfast and serve customers from 8:00\n[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at\n[(ID:rasD4C) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter\n[(ID:Zdf5Wv) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping\n[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February\n[(ID:BapuLH) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE)\n[(ID:Gq9bSG) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:s7ZJvu) Monday February\n[(ID:utj4fL) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n[(ID:wJy7Iq) Monday February\n[(ID:63zVCg) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping\n[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter\n[(ID:pxL8gE) Monday February\n[(ID:Z2mhDH) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping\n[(ID:6QiGGI) Monday February 13 -- 05:00 PM] Activity: Isabella is sleeping\n[(ID:pxL8gE) Monday February 13 -- 06:00 AM] Activity: Isabella is working at the counter\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am", '', '[(ID:qEseft) Monday February 13 -- 06:00 PM] Activity: Isabella is']
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format:
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently: Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:yImesR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:6j0ifK) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:F64QTm) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:6XEE6p) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:RP7ENL) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:ka074q) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:2RGtsz) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:F9yMhc) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:kkNXwu) Monday February 13 -- 07:00 AM] Activity: Isabella is working at the counter
+[(ID:ZuNC0j) Monday February 13 -- 08:00 AM] Activity: Isabella is working at the counter
+[(ID:SdvPPq) Monday February 13 -- 09:00 AM] Activity: Isabella is working at the counter
+2) prepare breakfast and serve customers from 8:00
+[(ID:HNcQ6R) Monday February 13 -- 07:00 AM] Activity: Isabella is working at
+[(ID:rasD4C) Monday February 13 -- 10:00 AM] Activity: Isabella is working at the counter
+[(ID:Zdf5Wv) Monday February 13 -- 11:00 AM] Activity: Isabella is sleeping
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February
+[(ID:BapuLH) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE)
+[(ID:Gq9bSG) Monday February 13 -- 01:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:s7ZJvu) Monday February
+[(ID:utj4fL) Monday February 13 -- 02:00 PM] Activity: Isabella is working at the counter
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:wJy7Iq) Monday February
+[(ID:63zVCg) Monday February 13 -- 03:00 PM] Activity: Isabella is sleeping
+[(ID:9nFx9U) Monday February 13 -- 04:00 PM] Activity: Isabella is working at the counter
+[(ID:pxL8gE) Monday February
+[(ID:Z2mhDH) Monday February 13 -- 04:00 PM] Activity: Isabella is sleeping
+[(ID:6QiGGI) Monday February 13 -- 05:00 PM] Activity: Isabella is sleeping
+[(ID:pxL8gE) Monday February 13 -- 06:00 AM] Activity: Isabella is working at the counter
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 6:00 am
+[(ID:qEseft) Monday February 13 -- 06:00 PM] Activity: Isabella is
+
+~~~ output    ----------------------------------------------------
+sleeping
+2) prepare breakfast and serve customers from 8:00
+[(ID:7o2RZr) Monday February 13 -- 12:00 PM] Activity: Isabella is working at the counter
+
+=== END ==========================================================
+
+
+
+stopped when I killed it from top

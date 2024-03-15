@@ -10,9 +10,10 @@ import sys
 sys.path.append('../../')
 
 from global_methods import *
+from persona.prompt_template.run_gpt_prompt import *
 
 class Scratch: 
-  def __init__(self, f_saved): 
+  def __init__(self, f_saved, currently_input): #FIXME input to be added to currently when starting the sim 
     # PERSONA HYPERPARAMETERS
     # <vision_r> denotes the number of tiles that the persona can see around 
     # them. 
@@ -180,7 +181,21 @@ class Scratch:
       self.age = scratch_load["age"]
       self.innate = scratch_load["innate"]
       self.learned = scratch_load["learned"]
+      #self.currently = scratch_load["currently"] + currently_input #FIXME add input
+      #FIXME give input to llm to reformulate and include into the existing "currently"
+
+      currently_prompt = f"Given what {self.first_name} {self.last_name} is up to currently:\n"
+      currently_prompt += scratch_load["currently"] + "\n\n"
+      currently_prompt += f"add this to it in the same style (talking about them in the third person) and give me back only that new text:\n"
+      currently_prompt += f"{currently_input}\n\n"
+      print(currently_prompt)
+      new_currently = ChatGPT_single_request(currently_prompt)
+      print(new_currently)
+      #self.currently = new_currently
+      #FIXME old version:
       self.currently = scratch_load["currently"]
+
+
       self.lifestyle = scratch_load["lifestyle"]
       self.living_area = scratch_load["living_area"]
 

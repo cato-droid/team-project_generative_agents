@@ -117,7 +117,9 @@ def home(request):
   with open(f_curr_step) as json_file:  
     step = json.load(json_file)["step"]
 
-  os.remove(f_curr_step)
+  #os.remove(f_curr_step)
+  #FIXME without this we can refresh the simulator_home/
+  # come back to it after looking at the agents?
 
   persona_names = []
   persona_names_set = set()

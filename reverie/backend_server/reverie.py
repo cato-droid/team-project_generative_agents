@@ -122,10 +122,17 @@ class ReverieServer:
     init_env_file = f"{sim_folder}/environment/{str(self.step)}.json"
     init_env = json.load(open(init_env_file))
     for persona_name in reverie_meta['persona_names']: 
+
+      #FIXME add prompt for every persona to add stuff to their "currently"
+      currently_input = input("What do you want " + persona_name +" to be working on?: ").strip()
+
+
       persona_folder = f"{sim_folder}/personas/{persona_name}"
       p_x = init_env[persona_name]["x"]
       p_y = init_env[persona_name]["y"]
-      curr_persona = Persona(persona_name, persona_folder)
+
+      #FIXME here we give the stuff to add to currently to the Persona
+      curr_persona = Persona(persona_name, currently_input, persona_folder)
 
       self.personas[persona_name] = curr_persona
       self.personas_tile[persona_name] = (p_x, p_y)
