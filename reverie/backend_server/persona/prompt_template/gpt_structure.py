@@ -7,21 +7,21 @@ File: gpt_structure.py
 Description: Wrapper functions for calling LLama2 APIs.
 """
 import json
-import time 
-from litellm import completion 
+import time
 
+from litellm import completion
 from utils import *
 
 def temp_sleep(seconds=0.1):
   time.sleep(seconds)
 
+
 def ChatGPT_single_request(prompt): 
   temp_sleep()
 
   response = completion(
-    model="meta-llama/Llama-2-7b-hf", 
-    messages=[{"role": "user", "content": prompt}],
-    api_base="http://134.2.56.203:11434"
+    model="ollama_chat/llama2", 
+    messages=[{"role": "user", "content": prompt}]
   )
   return response["choices"][0]["message"]["content"]
 
