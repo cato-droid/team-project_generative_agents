@@ -154,6 +154,7 @@ that doesn't really fit what we asked for
 -> need to rum llama2/ollama on a server?
 -> how do we actually get the model and run it on a server
 so we can then access it from the gpt_structure?
+-> how did gpt4all do it?
 
 
 Tasks for later
