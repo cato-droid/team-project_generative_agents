@@ -9,8 +9,12 @@ Description: Wrapper functions for calling LLama2 APIs.
 import json
 import time
 
-from litellm import completion
+# load the large language model file
+from llama_cpp import Llama
+model = Llama(model_path="./llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin")
+
 from utils import *
+
 
 def temp_sleep(seconds=0.1):
   time.sleep(seconds)
@@ -19,10 +23,7 @@ def temp_sleep(seconds=0.1):
 def ChatGPT_single_request(prompt): 
   temp_sleep()
 
-  response = completion(
-    model="ollama_chat/llama2", 
-    messages=[{"role": "user", "content": prompt}]
-  )
+  response = model(prompt)
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
