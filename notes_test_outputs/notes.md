@@ -155,11 +155,18 @@ that doesn't really fit what we asked for
 -> how do we actually get the model and run it on a server
 so we can then access it from the gpt_structure?
 -> how did gpt4all do it?
+https://swharden.com/blog/2023-07-29-ai-chat-locally-with-python/
+
+Which model?
+-> fastest one for our use case, but still needs to output
+fairly good results, or the simulation will run into errors all the time
+- the larger the model, the slower it runs but also the higher the quality of
+outputs is.
+-> trying the smallest one (llama-2-7b-chat.ggmlv3.q2_K.bin)
 
 
 Tasks for later
--switch to most powerful gpt4all model possible
--try to use gpu
+- use gpu
 - split llm from the rest of the code and run it on the ssh server
 
 
