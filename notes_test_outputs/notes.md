@@ -155,7 +155,6 @@ that doesn't really fit what we asked for
 -> how do we actually get the model and run it on a server
 so we can then access it from the gpt_structure?
 -> how did gpt4all do it?
-https://swharden.com/blog/2023-07-29-ai-chat-locally-with-python/
 
 Which model?
 -> fastest one for our use case, but still needs to output
@@ -163,10 +162,22 @@ fairly good results, or the simulation will run into errors all the time
 - the larger the model, the slower it runs but also the higher the quality of
 outputs is.
 -> trying the smallest one (llama-2-7b-chat.ggmlv3.q2_K.bin)
+https://swharden.com/blog/2023-07-29-ai-chat-locally-with-python/
+https://pypi.org/project/llama-cpp-python/
+problem: latest version of llama-cpp-python works with .gguf files,
+not with .bin files. Putting a .bin file in the model path gives:
+ValueError: Failed to load model from file: ./llama-2-7b-chat.ggmlv3.q2_K.bin
+-> fix: install older version
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
 
-Tasks for later
-- use gpu
+
+use gpu:
+https://github.com/abetlen/llama-cpp-python/issues/576
+
+fix embedd error
+
+Tasks for later?
 - split llm from the rest of the code and run it on the ssh server
 
 
