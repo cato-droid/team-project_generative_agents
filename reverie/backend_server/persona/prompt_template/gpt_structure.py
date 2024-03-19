@@ -8,12 +8,18 @@ Description: Wrapper functions for calling LLama2 APIs.
 """
 import json
 import time
+import os
+
+from utils import *
 
 # load the large language model file
 from llama_cpp import Llama
-model = Llama(model_path="./llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin")
 
-from utils import *
+current_path = os.getcwd()
+print(current_path)
+
+model = Llama(model_path = "./persona/prompt_template/llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin",
+              n_gpu_layers = -1) #FIXME how many layers makes sense?
 
 
 def temp_sleep(seconds=0.1):
@@ -23,7 +29,8 @@ def temp_sleep(seconds=0.1):
 def ChatGPT_single_request(prompt): 
   temp_sleep()
 
-  response = model(prompt)
+  response = model.create_chat_completion(
+                messages = [{"role": "user", "content": prompt}])
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
