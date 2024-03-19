@@ -178,6 +178,7 @@ https://github.com/abetlen/llama-cpp-python/issues/576
 fix embedd error
 
 Tasks for later?
+-update the README.md
 - split llm from the rest of the code and run it on the ssh server
 
 
