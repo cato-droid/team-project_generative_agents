@@ -173,21 +173,23 @@ pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
 
 use gpu:
-https://github.com/abetlen/llama-cpp-python/issues/576
 
 tried:
 CMAKE_ARGS="-DLLAMA_CUBAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
--> need to install ... first
+-> ran through, but stil no GPU support
+-> need to build from scratch
+-> need to install nvidia-cuda-toolkit first
+https://github.com/abetlen/llama-cpp-python/issues/576
 
 
 fix embedd error
--> try Embedding() from llama-cpp-python
+(argument self missing?)
 
-Do we "damage" the local llm with our requests?
--> the responses get worse and worse with every run of the questions
+results of llm are still unpredictable
 
 Tasks for later?
 -update the README.md
 - split llm from the rest of the code and run it on the ssh server
+research llama2 quantization
 
 
