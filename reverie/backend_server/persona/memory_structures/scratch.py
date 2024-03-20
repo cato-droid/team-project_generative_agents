@@ -188,12 +188,12 @@ class Scratch:
       currently_prompt += scratch_load["currently"] + "\n\n"
       currently_prompt += f"add this to it in the same style (talking about them in the third person):\n\n"
       currently_prompt += f"{currently_input}\n\n"
-      currently_prompt += f"And give me back only that new text, that describes what {self.first_name} {self.last_name}"
+      currently_prompt += f"And give me back only that new text, that describes what {self.first_name} {self.last_name} "
       currently_prompt += f"is currently doing. Nothing else around that. Not even a greeting.\n"
       print(currently_prompt)
       new_currently = ChatGPT_single_request(currently_prompt)
       print("response: \n")
-      print(new_currently)
+      print(new_currently + "\n")
       self.currently = new_currently
       #FIXME old version:
       #self.currently = scratch_load["currently"]
