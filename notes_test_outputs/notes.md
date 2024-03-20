@@ -175,7 +175,16 @@ pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 use gpu:
 https://github.com/abetlen/llama-cpp-python/issues/576
 
+tried:
+CMAKE_ARGS="-DLLAMA_CUBAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
+-> need to install ... first
+
+
 fix embedd error
+-> try Embedding() from llama-cpp-python
+
+Do we "damage" the local llm with our requests?
+-> the responses get worse and worse with every run of the questions
 
 Tasks for later?
 -update the README.md
