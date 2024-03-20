@@ -184,16 +184,19 @@ class Scratch:
       #self.currently = scratch_load["currently"] + currently_input #FIXME add input
       #FIXME give input to llm to reformulate and include into the existing "currently"
 
-      currently_prompt = f"Given what {self.first_name} {self.last_name} is up to currently:\n"
+      currently_prompt = f"Given this text of what {self.first_name} {self.last_name} is up to currently:\n\n"
       currently_prompt += scratch_load["currently"] + "\n\n"
-      currently_prompt += f"add this to it in the same style (talking about them in the third person) and give me back only that new text:\n"
+      currently_prompt += f"add this to it in the same style (talking about them in the third person):\n\n"
       currently_prompt += f"{currently_input}\n\n"
+      currently_prompt += f"And give me back only that new text, that describes what {self.first_name} {self.last_name}"
+      currently_prompt += f"is currently doing. Nothing else around that.\n"
       print(currently_prompt)
       new_currently = ChatGPT_single_request(currently_prompt)
+      print("response: \n")
       print(new_currently)
-      #self.currently = new_currently
+      self.currently = new_currently
       #FIXME old version:
-      self.currently = scratch_load["currently"]
+      #self.currently = scratch_load["currently"]
 
 
       self.lifestyle = scratch_load["lifestyle"]
