@@ -19,7 +19,7 @@ current_path = os.getcwd()
 print(current_path)
 
 model = Llama(model_path = "./persona/prompt_template/llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin",
-              n_gpu_layers = -1) #FIXME how many layers makes sense?
+              n_gpu_layers = 30) #FIXME how many layers makes sense?
 
 
 def temp_sleep(seconds=0.1):
@@ -275,9 +275,7 @@ def get_embedding(text):
     text = text.replace("\n", " ")
     if not text: 
         text = "this is blank"
-    embedder = Embed4All()
-    embedding = embedder.embed(text)
-    return embedding
+    return Llama.create_embedding(input=text, model=model) 
 
 
 
