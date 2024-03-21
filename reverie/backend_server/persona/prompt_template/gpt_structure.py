@@ -211,6 +211,9 @@ def GPT_request(prompt, gpt_parameter):
     a str of Llama's response. 
   """
   temp_sleep()
+  #FIXME
+  print("gpt_parameter:\n")
+  print(gpt_parameter)
   try: 
 
 
