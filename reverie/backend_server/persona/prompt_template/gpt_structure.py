@@ -19,7 +19,9 @@ current_path = os.getcwd()
 print(current_path)
 
 model = Llama(model_path = "./persona/prompt_template/llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin",
-              n_gpu_layers = 30) #FIXME how many layers makes sense?
+              embedding = True,
+              n_ctx=10000, #permit larger contexts
+              n_gpu_layers = 35) #adjust to layers of gpu that the simulation is run on
 
 
 def temp_sleep(seconds=0.1):
@@ -30,7 +32,8 @@ def ChatGPT_single_request(prompt):
   temp_sleep()
 
   response = model.create_chat_completion(
-                messages = [{"role": "user", "content": prompt}])
+                messages = [{"role": "user", "content": prompt}],
+                max_tokens = 1000)
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
@@ -51,8 +54,10 @@ def GPT4All_request(prompt):
   temp_sleep()
 
   try: 
-    output = model.generate(prompt, max_tokens=max_tokens)
-    return output
+    output = model.create_chat_completion(
+            messages = [{"role": "user", "content": prompt}],
+            max_tokens=max_tokens)
+    return output["choices"][0]["message"]["content"]
   except: 
     print ("ChatGPT ERROR")
     return "ChatGPT ERROR"
@@ -72,8 +77,10 @@ def ChatGPT_request(prompt):
   """
   # temp_sleep()
   try: 
-    output = model.generate(prompt, max_tokens=max_tokens)
-    return output
+    output = model.create_chat_completion(
+            messages = [{"role": "user", "content": prompt}],
+            max_tokens = 1000)
+    return output["choices"][0]["message"]["content"]
   except: 
     print ("ChatGPT ERROR")
     return "ChatGPT ERROR"
@@ -208,8 +215,8 @@ def GPT_request(prompt, gpt_parameter):
   try: 
 
 
-    output = model.generate(
-      prompt,
+    output = model.create_chat_completion(
+      messages = [{"role": "user", "content":prompt}],
       max_tokens=gpt_parameter["max_tokens"],
       temp=gpt_parameter["temperature"],
       top_p=gpt_parameter["top_p"],
@@ -275,7 +282,7 @@ def get_embedding(text):
     text = text.replace("\n", " ")
     if not text: 
         text = "this is blank"
-    return Llama.create_embedding(input=text, model=model) 
+    return model.create_embedding(input=text, model=model) 
 
 
 
