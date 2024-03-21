@@ -182,6 +182,7 @@ export FORCE_CMAKE=1
 pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
 fix/adjust all relevant functions in gpt_structure to llama2
+-> currently error with GPT_request (always runs into exception TOKEN LIMIT EXCEEDED)
 
 results of llm are still unpredictable
 
