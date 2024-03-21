@@ -219,9 +219,10 @@ def GPT_request(prompt, gpt_parameter):
 
     output = model.create_chat_completion(
       messages = [{"role": "user", "content":prompt}],
-      max_tokens=gpt_parameter["max_tokens"],
-      temp=gpt_parameter["temperature"],
-      top_p=gpt_parameter["top_p"])
+      #max_tokens=gpt_parameter["max_tokens"], #FIXME does this fix the exception?
+      #temp=gpt_parameter["temperature"],
+      #top_p=gpt_parameter["top_p"]
+      )
     
     return output["choices"][0]["message"]
   except: 
