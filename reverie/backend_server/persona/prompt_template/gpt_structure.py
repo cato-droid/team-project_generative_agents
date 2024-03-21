@@ -37,10 +37,10 @@ def ChatGPT_single_request(prompt):
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
-# #####################[SECTION 1: CHATGPT4All STRUCTURE] ######################
+# #####################[SECTION 1: Llama2 STRUCTURE] ######################
 # ============================================================================
 
-def GPT4All_request(prompt): 
+'''def GPT4All_request(prompt): #FIXME needed?
   """
   Given a prompt, make a request to GPT4All model and returns the response.
   ARGS:
@@ -61,11 +61,11 @@ def GPT4All_request(prompt):
   except: 
     print ("ChatGPT ERROR")
     return "ChatGPT ERROR"
-
+'''
 
 def ChatGPT_request(prompt): 
   """
-  Given a prompt, make a request to GPT4All model
+  Given a prompt, make a request to Llama model
 
   ARGS:
     prompt: a str prompt
@@ -73,7 +73,7 @@ def ChatGPT_request(prompt):
                    the parameter and the values indicating the parameter 
                    values.   
   RETURNS: 
-    a str of GPT4All's response. 
+    a str of Llama's response. 
   """
   # temp_sleep()
   try: 
@@ -82,11 +82,11 @@ def ChatGPT_request(prompt):
             max_tokens = 1000)
     return output["choices"][0]["message"]["content"]
   except: 
-    print ("ChatGPT ERROR")
-    return "ChatGPT ERROR"
+    print ("llm ERROR")
+    return "llm ERROR"
 
 
-def GPT4_safe_generate_response(prompt, 
+'''def GPT4_safe_generate_response(prompt, #FIXME needed?
                                    example_output,
                                    special_instruction,
                                    repeat=3,
@@ -122,7 +122,7 @@ def GPT4_safe_generate_response(prompt,
     except: 
       pass
 
-  return False
+  return False'''
 
 
 def ChatGPT_safe_generate_response(prompt, 
@@ -133,14 +133,13 @@ def ChatGPT_safe_generate_response(prompt,
                                    func_validate=None,
                                    func_clean_up=None,
                                    verbose=False): 
-  # prompt = 'GPT4All Prompt:\n"""\n' + prompt + '\n"""\n'
   prompt = '"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
   prompt += "Example output json:\n"
   prompt += '{"output": "' + str(example_output) + '"}'
 
   if verbose: 
-    print ("GPT4All PROMPT")
+    print ("Llama PROMPT")
     print (prompt)
 
   for i in range(repeat): 
@@ -176,7 +175,7 @@ def ChatGPT_safe_generate_response_OLD(prompt,
                                    func_clean_up=None,
                                    verbose=False): 
   if verbose: 
-    print ("GPT4All PROMPT")
+    print ("Llama PROMPT")
     print (prompt)
 
   for i in range(repeat): 
@@ -196,20 +195,20 @@ def ChatGPT_safe_generate_response_OLD(prompt,
 
 
 # ============================================================================
-# ###################[SECTION 2: ORIGINAL GPT4All STRUCTURE] ###################
+# ###################[SECTION 2: ORIGINAL Llama STRUCTURE] ###################
 # ============================================================================
 
 def GPT_request(prompt, gpt_parameter): 
   """
-  Given a prompt and a dictionary of GPT parameters, make a request to GPT4All
-  server and returns the response. 
+  Given a prompt and a dictionary of GPT parameters, make a request to the local
+  Llama model and returns the response. 
   ARGS:
     prompt: a str prompt
     gpt_parameter: a python dictionary with the keys indicating the names of  
                    the parameter and the values indicating the parameter 
                    values.   
   RETURNS: 
-    a str of GPT4All's response. 
+    a str of Llama's response. 
   """
   temp_sleep()
   try: 
@@ -219,11 +218,9 @@ def GPT_request(prompt, gpt_parameter):
       messages = [{"role": "user", "content":prompt}],
       max_tokens=gpt_parameter["max_tokens"],
       temp=gpt_parameter["temperature"],
-      top_p=gpt_parameter["top_p"],
-
- 
-    )
-    return output
+      top_p=gpt_parameter["top_p"])
+    
+    return output["choices"][0]["message"]
   except: 
     print ("TOKEN LIMIT EXCEEDED")
     return "TOKEN LIMIT EXCEEDED"
@@ -235,13 +232,13 @@ def generate_prompt(curr_input, prompt_lib_file):
   the path to a prompt file. The prompt file contains the raw str prompt that
   will be used, which contains the following substr: !<INPUT>! -- this 
   function replaces this substr with the actual curr_input to produce the 
-  final promopt that will be sent to the GPT3 server. 
+  final promopt that will be sent to the Llama model. 
   ARGS:
     curr_input: the input we want to feed in (IF THERE ARE MORE THAN ONE
                 INPUT, THIS CAN BE A LIST.)
     prompt_lib_file: the path to the promopt file. 
   RETURNS: 
-    a str prompt that will be sent to GPT4All's model.  
+    a str prompt that will be sent to the Llama model.  
   """
   if type(curr_input) == type("string"): 
     curr_input = [curr_input]
