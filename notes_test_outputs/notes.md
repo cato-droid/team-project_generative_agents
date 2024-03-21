@@ -174,16 +174,14 @@ pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
 use gpu:
 
-tried:
-CMAKE_ARGS="-DLLAMA_CUBAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
--> ran through, but stil no GPU support
--> need to build from scratch
 -> need to install nvidia-cuda-toolkit first
 https://github.com/abetlen/llama-cpp-python/issues/576
+worked with:
+export CMAKE_ARGS="-DLLAMA_CUBAS=on"
+export FORCE_CMAKE=1
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
-
-fix embedd error
-(argument self missing?)
+fix/adjust all relevant functions in gpt_structure to llama2
 
 results of llm are still unpredictable
 
