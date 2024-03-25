@@ -212,19 +212,19 @@ def GPT_request(prompt, gpt_parameter):
   """
   temp_sleep()
   #FIXME
-  print("gpt_parameter:\n")
-  print(gpt_parameter)
+  #print("gpt_parameter:\n")
+  #print(gpt_parameter)
   try: 
 
 
     output = model.create_chat_completion(
-      messages = [{"role": "user", "content":prompt}],
+      messages = [{"role": "user", "content":prompt}]#,
       #max_tokens=gpt_parameter["max_tokens"], #FIXME does this fix the exception?
       #temp=gpt_parameter["temperature"],
       #top_p=gpt_parameter["top_p"]
       )
     
-    return output["choices"][0]["message"]
+    return output["choices"][0]["message"]["content"]
   except: 
     print ("TOKEN LIMIT EXCEEDED")
     return "TOKEN LIMIT EXCEEDED"
