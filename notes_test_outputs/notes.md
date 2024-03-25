@@ -183,7 +183,12 @@ pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
 
 fix/adjust all relevant functions in gpt_structure to llama2
 -> currently error with GPT_request (always runs into exception TOKEN LIMIT EXCEEDED)
--> fixed? by commenting out gpt params -> now different error and kinda slow (still bit faster than gpt4all)
+-> fixed by commenting out gpt params
+
+Problem: privacy policy of llama2 -> model refuses to complete prompts with personal info about agents
+-> adjust prompts
+
+
 
 results of llm are still unpredictable
 
