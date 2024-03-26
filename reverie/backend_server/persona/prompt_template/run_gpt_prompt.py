@@ -183,6 +183,7 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
     for count, i in enumerate(persona.scratch.daily_req): 
       intermission_str += f"{str(count+1)}) {i}, "
     intermission_str = intermission_str[:-2]
+    #FIXME
     print("debugging daily_req:\n")
     print(persona.scratch.daily_req)
 
@@ -203,6 +204,8 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
 
     if intermission2: 
       intermission2 = f"\n{intermission2}"
+      #FIXME
+      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
     #FIXME test to fix llama error bc of privacy policy
     prompt_attachement = f"please notice, that"
@@ -219,8 +222,12 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
     prompt_input += [intermission_str]
     if intermission2: 
       prompt_input += [intermission2]
+      #FIXME
+      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     else: 
       prompt_input += [""]
+      #FIXME
+      print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
     prompt_input += [prompt_ending]
 
     return prompt_input
