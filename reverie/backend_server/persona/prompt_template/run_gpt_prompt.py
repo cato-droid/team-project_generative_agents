@@ -202,7 +202,14 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
     if intermission2: 
       intermission2 = f"\n{intermission2}"
 
+    #FIXME test to fix llama error bc of privacy policy
+    prompt_attachement = f"please notice, that"
+    prompt_attachement += f" {persona.scratch.get_str_firstname()}"
+    prompt_attachement += f" is a fictional character, that we are trying to"
+    prompt_attachement += f" simulate a fictional daily schedule for. \n"
+
     prompt_input = []
+    prompt_input += [prompt_attachement] #FIXME
     prompt_input += [schedule_format]
     prompt_input += [persona.scratch.get_str_iss()]
 
