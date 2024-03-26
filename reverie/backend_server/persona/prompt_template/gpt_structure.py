@@ -20,7 +20,7 @@ print(current_path)
 
 model = Llama(model_path = "./persona/prompt_template/llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin",
               embedding = True,
-              n_ctx=1000000, #permit larger contexts
+              n_ctx=15000, #permit larger contexts
               n_gpu_layers = 35) #adjust to layers of gpu that the simulation is run on
 
 
