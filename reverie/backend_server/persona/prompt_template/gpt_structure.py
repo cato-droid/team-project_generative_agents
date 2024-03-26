@@ -33,7 +33,7 @@ def ChatGPT_single_request(prompt):
 
   response = model.create_chat_completion(
                 messages = [{"role": "user", "content": prompt}],
-                max_tokens = 1000)
+                max_tokens = 1000000)
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
@@ -79,7 +79,7 @@ def ChatGPT_request(prompt):
   try: 
     output = model.create_chat_completion(
             messages = [{"role": "user", "content": prompt}],
-            max_tokens = 1000)
+            max_tokens = 1000000)
     return output["choices"][0]["message"]["content"]
   except: 
     print ("llm ERROR")
