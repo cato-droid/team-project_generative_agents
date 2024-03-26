@@ -188,6 +188,10 @@ fix/adjust all relevant functions in gpt_structure to llama2
 Problem: privacy policy of llama2 -> model refuses to complete prompts with personal info about agents
 -> adjust prompts
 
+Now problem with tokens/context size/????? Not the whole prompt gets through, llm doesn't know what to do.
+-> how to fix?
+-> increasing context and tokens hasn't worked so far
+
 
 
 results of llm are still unpredictable
