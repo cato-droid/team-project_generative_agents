@@ -183,6 +183,8 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
     for count, i in enumerate(persona.scratch.daily_req): 
       intermission_str += f"{str(count+1)}) {i}, "
     intermission_str = intermission_str[:-2]
+    print("debugging daily_req:\n")
+    print(persona.scratch.daily_req)
 
     prior_schedule = ""
     if p_f_ds_hourly_org: 
