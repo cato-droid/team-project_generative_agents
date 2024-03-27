@@ -191,10 +191,26 @@ Problem: privacy policy of llama2 -> model refuses to complete prompts with pers
 Now problem with tokens/context size/????? Not the whole prompt gets through, llm doesn't know what to do.
 -> how to fix?
 -> increasing context and tokens hasn't worked so far
-
+-when I add to the prompt input, another element at the end of the list gets lost
+-> add in the same list element to the prompt
 
 
 results of llm are still unpredictable
+->But if I give it the same input over and over again (e.g. with currently of agents),
+I get similar, kinda good results. Therfore:
+Isabella is baking a cake
+Maria is knitting a sweater and
+Klaus is watching birds
+
+-it's very hard to try to get the llm to do exactly what I want
+
+-llama almost always runs into the same problem when trying to break down the hourly schedule. It's in line 394 in run_gpt_prompt.py (file says something here sometimes fails... see screenshot)
+
+other error: in <generate_action_game_object>
+-problem: function before asks for an area that isabella should go into to sleep. The llm is supposed to pick one of {main room}. Instead it returns "sleeping", which then leads to this error
+
+
+
 
 Tasks for later?
 -update the user prompt, so the user can see the currently, before adding to it (context)
