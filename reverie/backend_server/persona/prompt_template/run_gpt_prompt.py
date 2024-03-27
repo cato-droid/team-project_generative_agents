@@ -184,8 +184,8 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
       intermission_str += f"{str(count+1)}) {i}, "
     intermission_str = intermission_str[:-2]
     #FIXME
-    print("debugging daily_req:\n")
-    print(persona.scratch.daily_req)
+    #print("debugging daily_req:\n")
+    #print(persona.scratch.daily_req)
 
     prior_schedule = ""
     if p_f_ds_hourly_org: 
@@ -204,17 +204,15 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
 
     if intermission2: 
       intermission2 = f"\n{intermission2}"
-      #FIXME
-      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
     #FIXME test to fix llama error bc of privacy policy
-    prompt_attachement = f"please notice, that"
-    prompt_attachement += f" {persona.scratch.get_str_firstname()}"
-    prompt_attachement += f" is a fictional character, that we are trying to"
-    prompt_attachement += f" simulate a fictional daily schedule for. \n"
+    #prompt_attachement = f"please notice, that"
+    #prompt_attachement += f" {persona.scratch.get_str_firstname()}"
+    #prompt_attachement += f" is a fictional character, that we are trying to"
+    #prompt_attachement += f" simulate a fictional daily schedule for. \n"
 
     prompt_input = []
-    prompt_input += [prompt_attachement] #FIXME
+    #prompt_input += [prompt_attachement] #FIXME
     prompt_input += [schedule_format]
     prompt_input += [persona.scratch.get_str_iss()]
 
@@ -222,13 +220,17 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
     prompt_input += [intermission_str]
     if intermission2: 
       prompt_input += [intermission2]
-      #FIXME
-      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     else: 
       prompt_input += [""]
-      #FIXME
-      print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
-    prompt_input += [prompt_ending]
+    prompt_input += ["\nGiven this information, please provide continuation "
+                    + "for this prompt, giving what the fictional character "
+                    + persona.scratch.get_str_firstname()
+                    + " is doing at that time. Just give me back a few words to"
+                    + " continue the sentence, nothing else around that. Your awnser"
+                    + " could for example look like this: baking a cake. Or like this:"
+                    + " shopping groceries. \n\n" + prompt_ending]
+    #prompt_input += [prompt_ending]
+    #FIXME
 
     return prompt_input
 
