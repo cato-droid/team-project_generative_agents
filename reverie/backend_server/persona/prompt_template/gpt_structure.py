@@ -20,7 +20,7 @@ print(current_path)
 
 model = Llama(model_path = "./persona/prompt_template/llama-models/llama-2-7b-chat.ggmlv3.q2_K.bin",
               embedding = True,
-              n_ctx=1000, #permit larger contexts
+              n_ctx=10000, #permit larger contexts
               n_gpu_layers = 35) #adjust to layers of gpu that the simulation is run on
 
 
@@ -33,7 +33,7 @@ def ChatGPT_single_request(prompt):
 
   response = model.create_chat_completion(
                 messages = [{"role": "user", "content": prompt}],
-                max_tokens = 1000)
+                max_tokens = 1000000)
   return response["choices"][0]["message"]["content"]
 
 # ============================================================================
@@ -79,7 +79,7 @@ def ChatGPT_request(prompt):
   try: 
     output = model.create_chat_completion(
             messages = [{"role": "user", "content": prompt}],
-            max_tokens = 1000)
+            max_tokens = 1000000)
     return output["choices"][0]["message"]["content"]
   except: 
     print ("llm ERROR")
