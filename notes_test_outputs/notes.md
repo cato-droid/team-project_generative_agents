@@ -204,10 +204,18 @@ Klaus is watching birds
 
 -it's very hard to try to get the llm to do exactly what I want
 
--llama almost always runs into the same problem when trying to break down the hourly schedule. It's in line 394 in run_gpt_prompt.py (file says something here sometimes fails... see screenshot)
+-llama almost always runs into the same problem when trying to break down the hourly schedule. It's in line 394/396 in run_gpt_prompt.py (file says something here sometimes fails... see screenshot)
 
 other error: in <generate_action_game_object>
 -problem: function before asks for an area that isabella should go into to sleep. The llm is supposed to pick one of {main room}. Instead it returns "sleeping", which then leads to this error
+
+save backend command line output to file:
+python reverie.py >&1 | tee ../../notes_test_outputs/test_28_3_24_6.txt
+
+final presentation 12.04. in the morning
+
+-try chat.lmsys.org vicuna
+
 
 
 
