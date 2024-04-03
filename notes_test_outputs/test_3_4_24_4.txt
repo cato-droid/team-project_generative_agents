@@ -1,0 +1,50 @@
+/home/team_project/cato/team-project_generative_agents/reverie/backend_server
+Enter the name of the forked simulation: Enter the name of the new simulation: What do you want Isabella Rodriguez to be working on?: Given this text of what Isabella Rodriguez is up to currently:
+
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style:
+
+baking a cake
+
+And then give me back the combined text, that describes what Isabella Rodriguez is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+
+
+What do you want Maria Lopez to be working on?: Given this text of what Maria Lopez is up to currently:
+
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style:
+
+knitting a sweater
+
+And then give me back the combined text, that describes what Maria Lopez is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+
+
+What do you want Klaus Mueller to be working on?: Given this text of what Klaus Mueller is up to currently:
+
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style:
+
+watching birds
+
+And then give me back the combined text, that describes what Klaus Mueller is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+
+
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option: Error.
+Enter option: 
