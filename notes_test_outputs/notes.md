@@ -215,7 +215,29 @@ python reverie.py >&1 | tee ../../notes_test_outputs/test_28_3_24_6.txt
 final presentation 12.04. in the morning
 
 -try chat.lmsys.org vicuna
+-> vicuna-33b seems to be a bit better than llama2-7b-chat
 
+-struggle to find .bin models
+-13b vicuna produces out of memory error, so does the 7b v3.q8_0
+-7b v3.q2_K works, but is similarily bad than the llama we had
+
+-updated the llama-cpp-python to work with newer (.gguf) models
+-> gpu acceleration doesn't work anymore
+-tried llava-v1.6-vicuna-7b-Q4_0.gguf -> error (and response just added text/not the combined or just empty response)
+-tried vicuna-13b-v1.5-16k.Q2_K.gguf -> error (and responses are empty/ come with prefix)
+
+-> responses of models that actually run are not better than those of llama2
+-> go back to running llama2-version with gpu acceleration
+
+
+
+-> now gpu acceleration doesn't work anymore?????
+
+export CMAKE_ARGS="-DLLAMA_CUBAS=on"
+export FORCE_CMAKE=1
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade
+
+doesn't change that  -_-
 
 
 
