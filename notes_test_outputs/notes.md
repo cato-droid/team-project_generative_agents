@@ -232,12 +232,12 @@ final presentation 12.04. in the morning
 
 
 -> now gpu acceleration doesn't work anymore?????
+-> fixed 
 
-export CMAKE_ARGS="-DLLAMA_CUBAS=on"
-export FORCE_CMAKE=1
-pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade
-
-doesn't change that  -_-
+tried different models:
+-models other than llama/vicuna don't work (magic?)
+-llama-chat is better than llama/vicuna in our case
+-larger models give better responses, but bigger than 7B, q4 run out of memory
 
 
 
