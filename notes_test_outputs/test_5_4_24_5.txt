@@ -1,0 +1,1498 @@
+Wizard-Vicuna-7B-Uncensored.ggmlv3.q2_K
+
+
+/home/team_project/cato/team-project_generative_agents/reverie/backend_server
+Enter the name of the forked simulation: Enter the name of the new simulation: What do you want Isabella Rodriguez to be working on?: Given this text of what Isabella Rodriguez is up to currently:
+
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style:
+
+baking a cake
+
+And then give me back the combined text, that describes what Isabella Rodriguez is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+ Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+
+What do you want Maria Lopez to be working on?: Given this text of what Maria Lopez is up to currently:
+
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style:
+
+knitting a sweater
+
+And then give me back the combined text, that describes what Maria Lopez is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+ Here's the combined text of what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree, streaming games on Twitch, and knitting a sweater at Hobbs Cafe. She also visits the cafe for studying and eating just about everyday.
+
+What do you want Klaus Mueller to be working on?: Given this text of what Klaus Mueller is up to currently:
+
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style:
+
+watching birds
+
+And then give me back the combined text, that describes what Klaus Mueller is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+ Here's the combined text: 
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities, and watching birds.
+
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option: GNS FUNCTION: <generate_wake_up_hour>
+=== persona/prompt_template/v2/wake_up_hour_v1.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-002', 'max_tokens': 5, 'temperature': 0.8, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', 'Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.', 'Isabella'] 
+
+~~~ prompt    ----------------------------------------------------
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+In general, Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Isabella's wake up hour: 
+
+~~~ output    ----------------------------------------------------
+8 
+
+=== END ==========================================================
+
+
+
+
+GNS FUNCTION: <generate_first_daily_plan>
+=== persona/prompt_template/v2/daily_planning_v6.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 500, 'temperature': 1, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': None} 
+
+~~~ prompt_input    ----------------------------------------------
+['Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', 'Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.', 'Monday February 13', 'Isabella', '8:00 am'] 
+
+~~~ prompt    ----------------------------------------------------
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+In general, Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Today is Monday February 13. Here is Isabella's plan today in broad-strokes (with the time of the day. e.g., have a lunch at 12:00 pm, watch TV from 7 to 8 pm): 1) wake up and complete the morning routine at 8:00 am, 2) 
+
+~~~ output    ----------------------------------------------------
+['wake up and complete the morning routine at 8:00 am', 'start work from 8:15 am until 5:00 pm', 'cook snacks for the cafe at 1:30 pm', 'take a break in the middle of the day at 2:00-3:00pm', 'get ready for the party at 4:00pm', "invite customers at 5:00pm and start celebrating Valentine's Day", 'open the cafe from 8:00 am to 8:00 pm'] 
+
+=== END ==========================================================
+
+
+
+
+GNS FUNCTION: <generate_hourly_schedule>
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:MOkLit) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:ZEeGAN) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:RFFZnz) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:X7yl4Q) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:QfOWNe) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:qOCj3O) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:zioOMJ) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:n6cP70) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:j2MF2X) Monday February 13 -- 08:00 AM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:MOkLit) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:ZEeGAN) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:RFFZnz) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:X7yl4Q) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:QfOWNe) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:qOCj3O) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:zioOMJ) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:n6cP70) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:j2MF2X) Monday February 13 -- 08:00 AM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:tZfAUw) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:reKp3m) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:pOIO5T) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:jfT6jK) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:mFLuVp) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:LAukks) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:d7MEDs) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:mjwPbu) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:cszX9O) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:KYZhvU) Monday February 13 -- 09:00 AM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:tZfAUw) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:reKp3m) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:pOIO5T) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:jfT6jK) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:mFLuVp) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:LAukks) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:d7MEDs) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:mjwPbu) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:cszX9O) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:KYZhvU) Monday February 13 -- 09:00 AM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:8PfryQ) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:qtNBT6) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:tcBv9G) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:d2Fqgo) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:bhrLuC) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:2ZBuUh) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:Q0ED1O) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:VtG6OH) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:BRooOS) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:1jUM3O) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:1OMGbD) Monday February 13 -- 10:00 AM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:8PfryQ) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:qtNBT6) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:tcBv9G) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:d2Fqgo) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:bhrLuC) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:2ZBuUh) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:Q0ED1O) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:VtG6OH) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:BRooOS) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:1jUM3O) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:1OMGbD) Monday February 13 -- 10:00 AM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:qnuKFx) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:5vIoqM) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:EQtxrS) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:QyDmmt) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:7eCSRf) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:uQNVnc) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:vooDmF) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:3Bs4pJ) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:5DodYm) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:5XPO7e) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:R0BLya) Monday February 13 -- 11:00 AM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:qnuKFx) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:5vIoqM) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:EQtxrS) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:QyDmmt) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:7eCSRf) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:uQNVnc) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:vooDmF) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:3Bs4pJ) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:5DodYm) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:5XPO7e) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:R0BLya) Monday February 13 -- 11:00 AM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:Qb00il) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:tv7Z8Q) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:1HcpOp) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:G6uboo) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:ZyZdZC) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:dpc8Pz) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:M0BskT) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:9dkFhd) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:RiCDUK) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:TVKAZS) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:CO1Rx3) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:7ZdPEy) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:ZCrM2S) Monday February 13 -- 12:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:Qb00il) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:tv7Z8Q) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:1HcpOp) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:G6uboo) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:ZyZdZC) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:dpc8Pz) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:M0BskT) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:9dkFhd) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:RiCDUK) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:TVKAZS) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:CO1Rx3) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:7ZdPEy) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:ZCrM2S) Monday February 13 -- 12:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+baking a cake 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:96fgJt) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:d2xnEz) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:a9nANv) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:aW5dJH) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:pjGVIk) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:XXZtz3) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:oH5KZX) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:k5SofM) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:FMAzPm) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:OqhI8w) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:dDJy7w) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:CYM4qC) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:D2hW9j) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:GnJVRa) Monday February 13 -- 01:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:96fgJt) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:d2xnEz) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:a9nANv) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:aW5dJH) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:pjGVIk) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:XXZtz3) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:oH5KZX) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:k5SofM) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:FMAzPm) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:OqhI8w) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:dDJy7w) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:CYM4qC) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:D2hW9j) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:GnJVRa) Monday February 13 -- 01:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:yBiyme) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:jQIlxB) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:R15pH8) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:FnSbKV) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:cm5C65) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:X9I6e5) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:j7MpWE) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:dsTDHa) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:VoCT6g) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:buKZSo) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:e2oFv0) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:nns2g2) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:UYcxhG) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:EcPcmr) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:SIytkz) Monday February 13 -- 02:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:yBiyme) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:jQIlxB) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:R15pH8) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:FnSbKV) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:cm5C65) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:X9I6e5) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:j7MpWE) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:dsTDHa) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:VoCT6g) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:buKZSo) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:e2oFv0) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:nns2g2) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:UYcxhG) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:EcPcmr) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:SIytkz) Monday February 13 -- 02:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:VcDHdm) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:hEd3jn) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:PAjbtm) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:lVEV8E) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:r2iwDN) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:tfSVs0) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:TNyrZj) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:1B8NXi) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:SsIhc6) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:lb64v4) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:vRlIlq) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:CiUGC1) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:KLfdNq) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:zhROfv) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:fc8I9S) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:o4nyqE) Monday February 13 -- 03:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:VcDHdm) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:hEd3jn) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:PAjbtm) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:lVEV8E) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:r2iwDN) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:tfSVs0) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:TNyrZj) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:1B8NXi) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:SsIhc6) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:lb64v4) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:vRlIlq) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:CiUGC1) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:KLfdNq) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:zhROfv) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:fc8I9S) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:o4nyqE) Monday February 13 -- 03:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:oRhxxT) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:Nh0piF) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:lzwQud) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:tirEGF) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:2sedaa) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:NotgJF) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:GHCysO) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:puoSeA) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:zq7ORJ) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:w4UG9G) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:rfUIDn) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:0sZNMG) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:MZ2mXI) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:J2tyJU) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:SFxSs4) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:i0aICI) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:GqraqE) Monday February 13 -- 04:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:oRhxxT) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:Nh0piF) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:lzwQud) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:tirEGF) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:2sedaa) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:NotgJF) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:GHCysO) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:puoSeA) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:zq7ORJ) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:w4UG9G) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:rfUIDn) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:0sZNMG) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:MZ2mXI) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:J2tyJU) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:SFxSs4) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:i0aICI) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:GqraqE) Monday February 13 -- 04:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:wJiZft) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:IsdiOm) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:xA1a5l) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:zV0JzU) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:kJDDn6) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:hbE9lA) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:uoLjH8) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:bDopqv) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:biMgYX) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:9qahjP) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:YWePLP) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:N7EcR8) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:FFMiur) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:6sUOgx) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:9YvQXP) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:zOVJAp) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:ZxaEmz) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:fFADDV) Monday February 13 -- 05:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:wJiZft) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:IsdiOm) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:xA1a5l) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:zV0JzU) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:kJDDn6) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:hbE9lA) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:uoLjH8) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:bDopqv) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:biMgYX) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:9qahjP) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:YWePLP) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:N7EcR8) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:FFMiur) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:6sUOgx) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:9YvQXP) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:zOVJAp) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:ZxaEmz) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:fFADDV) Monday February 13 -- 05:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:TQFDEc) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:pYikLq) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:jivd0D) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:0cgsdw) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:uV71EF) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:UF5LT1) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:CD4787) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:v6Lrka) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:0c4lCp) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:cf3PVv) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:PMZ1BP) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:uCX7mB) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:WBcwo4) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:Ycqvi0) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:H7xmzd) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:4BIJYz) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:egBk59) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:NHWeHx) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:UCv2dn) Monday February 13 -- 06:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:TQFDEc) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:pYikLq) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:jivd0D) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:0cgsdw) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:uV71EF) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:UF5LT1) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:CD4787) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:v6Lrka) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:0c4lCp) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:cf3PVv) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:PMZ1BP) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:uCX7mB) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:WBcwo4) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:Ycqvi0) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:H7xmzd) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:4BIJYz) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:egBk59) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:NHWeHx) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:UCv2dn) Monday February 13 -- 06:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:MDPvYT) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:PGqb64) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:EFZLnD) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:PMVZfm) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:Linw1R) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:MetVwT) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:7lc3c5) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:w5zy2z) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:6b3ttD) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:VE8ZyM) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:lxMGdV) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:i9GZQR) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:rZ0VBO) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:LEjWHU) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:kGC35m) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:nV9c62) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:dfoLgW) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:QjAw3G) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:TmYzxv) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:qVXIjG) Monday February 13 -- 07:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:MDPvYT) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:PGqb64) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:EFZLnD) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:PMVZfm) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:Linw1R) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:MetVwT) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:7lc3c5) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:w5zy2z) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:6b3ttD) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:VE8ZyM) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:lxMGdV) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:i9GZQR) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:rZ0VBO) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:LEjWHU) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:kGC35m) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:nV9c62) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:dfoLgW) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:QjAw3G) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:TmYzxv) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:qVXIjG) Monday February 13 -- 07:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:Cu9mVn) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:tSWASu) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:q8Lyoz) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:cUP0bM) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:N8Kwhk) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:mU40oa) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:W9lyIY) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:dePRUw) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:OhBr6T) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:l2sYl4) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:o6m2Ll) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:xjTWzC) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:CAhw13) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:FWZKNi) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:V9OF0e) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:qi2xzS) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:V9sTpI) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:SrB2Gx) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:vHCDYD) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:Y2fSbR) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:ZaoSSd) Monday February 13 -- 08:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:Cu9mVn) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:tSWASu) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:q8Lyoz) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:cUP0bM) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:N8Kwhk) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:mU40oa) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:W9lyIY) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:dePRUw) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:OhBr6T) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:l2sYl4) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:o6m2Ll) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:xjTWzC) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:CAhw13) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:FWZKNi) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:V9OF0e) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:qi2xzS) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:V9sTpI) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:SrB2Gx) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:vHCDYD) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:Y2fSbR) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:ZaoSSd) Monday February 13 -- 08:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:hEoa69) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:PyL2eC) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:DD8omt) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:oKRc3H) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:NxfnDj) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:SOTIpN) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:NoK3h8) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:BaOKRX) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:VHASu8) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:iclQgp) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:bAH2Zv) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:Rmwppe) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:VVEdFA) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:Wvschs) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:HZlCIS) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:amkjkb) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:6Xzf2e) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:R5f3ca) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:ifWt6j) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:ffk4Z2) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:u1IM2y) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:kUpgOe) Monday February 13 -- 09:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:hEoa69) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:PyL2eC) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:DD8omt) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:oKRc3H) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:NxfnDj) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:SOTIpN) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:NoK3h8) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:BaOKRX) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:VHASu8) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:iclQgp) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:bAH2Zv) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:Rmwppe) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:VVEdFA) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:Wvschs) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:HZlCIS) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:amkjkb) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:6Xzf2e) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:R5f3ca) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:ifWt6j) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:ffk4Z2) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:u1IM2y) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:kUpgOe) Monday February 13 -- 09:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:4sR2fg) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:FZ1lqW) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:eJea0v) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:JAot0w) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:XRqKyI) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:GYAqQu) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:0Ak20H) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:kcwput) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:cmbEsC) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:ToHK9e) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:p8bsbv) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:a5eWuU) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:S8dzRs) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:v2tIO2) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:BK6hKT) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:upv53B) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:Zt0LgH) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:JKR25u) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:D6wPHw) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:bnC8rB) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:8RmdRG) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:Zo2hN6) Monday February 13 -- 09:00 PM] Activity: Isabella is Shopping Groceries\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:AGkcqO) Monday February 13 -- 10:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:4sR2fg) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:FZ1lqW) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:eJea0v) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:JAot0w) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:XRqKyI) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:GYAqQu) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:0Ak20H) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:kcwput) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:cmbEsC) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:ToHK9e) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:p8bsbv) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:a5eWuU) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:S8dzRs) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:v2tIO2) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:BK6hKT) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:upv53B) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:Zt0LgH) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:JKR25u) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:D6wPHw) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:bnC8rB) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:8RmdRG) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:Zo2hN6) Monday February 13 -- 09:00 PM] Activity: Isabella is Shopping Groceries
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:AGkcqO) Monday February 13 -- 10:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries
+
+Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up at 7:0 
+
+=== END ==========================================================
+
+
+
+
+=== persona/prompt_template/v2/generate_hourly_schedule_v2.txt
+~~~ persona    ---------------------------------------------------
+Isabella Rodriguez 
+
+~~~ gpt_param ----------------------------------------------------
+{'engine': 'text-davinci-003', 'max_tokens': 50, 'temperature': 0.5, 'top_p': 1, 'stream': False, 'frequency_penalty': 0, 'presence_penalty': 0, 'stop': ['\n']} 
+
+~~~ prompt_input    ----------------------------------------------
+['[Monday February 13 -- 00:00 AM] Activity: [Fill in]\n[Monday February 13 -- 01:00 AM] Activity: [Fill in]\n[Monday February 13 -- 02:00 AM] Activity: [Fill in]\n[Monday February 13 -- 03:00 AM] Activity: [Fill in]\n[Monday February 13 -- 04:00 AM] Activity: [Fill in]\n[Monday February 13 -- 05:00 AM] Activity: [Fill in]\n[Monday February 13 -- 06:00 AM] Activity: [Fill in]\n[Monday February 13 -- 07:00 AM] Activity: [Fill in]\n[Monday February 13 -- 08:00 AM] Activity: [Fill in]\n[Monday February 13 -- 09:00 AM] Activity: [Fill in]\n[Monday February 13 -- 10:00 AM] Activity: [Fill in]\n[Monday February 13 -- 11:00 AM] Activity: [Fill in]\n[Monday February 13 -- 12:00 PM] Activity: [Fill in]\n[Monday February 13 -- 01:00 PM] Activity: [Fill in]\n[Monday February 13 -- 02:00 PM] Activity: [Fill in]\n[Monday February 13 -- 03:00 PM] Activity: [Fill in]\n[Monday February 13 -- 04:00 PM] Activity: [Fill in]\n[Monday February 13 -- 05:00 PM] Activity: [Fill in]\n[Monday February 13 -- 06:00 PM] Activity: [Fill in]\n[Monday February 13 -- 07:00 PM] Activity: [Fill in]\n[Monday February 13 -- 08:00 PM] Activity: [Fill in]\n[Monday February 13 -- 09:00 PM] Activity: [Fill in]\n[Monday February 13 -- 10:00 PM] Activity: [Fill in]\n[Monday February 13 -- 11:00 PM] Activity: [Fill in]', 'Name: Isabella Rodriguez\nAge: 34\nInnate traits: friendly, outgoing, hospitable\nLearned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.\nCurrently:  Here\'s the combined text of what Isabella Rodriguez is up to currently:\n"Isabella Rodriguez is planning on having a Valentine\'s Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."\nLifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.\nDaily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.\nCurrent Date: Monday February 13\n', '\n[(ID:mFutcR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping\n[(ID:V1n0o9) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping\n[(ID:tUHNBB) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping\n[(ID:my4y6t) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping\n[(ID:a3N7T2) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping\n[(ID:miGHlT) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping\n[(ID:C97xdo) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping\n[(ID:zaJZyM) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping\n[(ID:2aqkGt) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:xOggbS) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:sALW0u) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:iUH3wW) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up\n[(ID:5w1cor) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake\n[(ID:2iHtV7) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:GmDqC5) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:9YBp42) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:xNrdvu) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:bKoL1Y) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:DeQovv) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:UT1ibC) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:BqpEiP) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack\n[(ID:LikOL1) Monday February 13 -- 09:00 PM] Activity: Isabella is Shopping Groceries\n[(ID:pq10ZQ) Monday February 13 -- 10:00 PM] Activity: Isabella is Shopping Groceries\n\nMonday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up at 7:0\n\n', "Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm", '', '\nGiven this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. \n\n[(ID:39e2Qg) Monday February 13 -- 11:00 PM] Activity: Isabella is'] 
+
+~~~ prompt    ----------------------------------------------------
+Hourly schedule format: 
+[Monday February 13 -- 00:00 AM] Activity: [Fill in]
+[Monday February 13 -- 01:00 AM] Activity: [Fill in]
+[Monday February 13 -- 02:00 AM] Activity: [Fill in]
+[Monday February 13 -- 03:00 AM] Activity: [Fill in]
+[Monday February 13 -- 04:00 AM] Activity: [Fill in]
+[Monday February 13 -- 05:00 AM] Activity: [Fill in]
+[Monday February 13 -- 06:00 AM] Activity: [Fill in]
+[Monday February 13 -- 07:00 AM] Activity: [Fill in]
+[Monday February 13 -- 08:00 AM] Activity: [Fill in]
+[Monday February 13 -- 09:00 AM] Activity: [Fill in]
+[Monday February 13 -- 10:00 AM] Activity: [Fill in]
+[Monday February 13 -- 11:00 AM] Activity: [Fill in]
+[Monday February 13 -- 12:00 PM] Activity: [Fill in]
+[Monday February 13 -- 01:00 PM] Activity: [Fill in]
+[Monday February 13 -- 02:00 PM] Activity: [Fill in]
+[Monday February 13 -- 03:00 PM] Activity: [Fill in]
+[Monday February 13 -- 04:00 PM] Activity: [Fill in]
+[Monday February 13 -- 05:00 PM] Activity: [Fill in]
+[Monday February 13 -- 06:00 PM] Activity: [Fill in]
+[Monday February 13 -- 07:00 PM] Activity: [Fill in]
+[Monday February 13 -- 08:00 PM] Activity: [Fill in]
+[Monday February 13 -- 09:00 PM] Activity: [Fill in]
+[Monday February 13 -- 10:00 PM] Activity: [Fill in]
+[Monday February 13 -- 11:00 PM] Activity: [Fill in]
+===
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+
+[(ID:mFutcR) Monday February 13 -- 00:00 AM] Activity: Isabella is sleeping
+[(ID:V1n0o9) Monday February 13 -- 01:00 AM] Activity: Isabella is sleeping
+[(ID:tUHNBB) Monday February 13 -- 02:00 AM] Activity: Isabella is sleeping
+[(ID:my4y6t) Monday February 13 -- 03:00 AM] Activity: Isabella is sleeping
+[(ID:a3N7T2) Monday February 13 -- 04:00 AM] Activity: Isabella is sleeping
+[(ID:miGHlT) Monday February 13 -- 05:00 AM] Activity: Isabella is sleeping
+[(ID:C97xdo) Monday February 13 -- 06:00 AM] Activity: Isabella is sleeping
+[(ID:zaJZyM) Monday February 13 -- 07:00 AM] Activity: Isabella is sleeping
+[(ID:2aqkGt) Monday February 13 -- 08:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:xOggbS) Monday February 13 -- 09:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:sALW0u) Monday February 13 -- 10:00 AM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:iUH3wW) Monday February 13 -- 11:00 AM] Activity: Isabella is Shopping Groceries
+[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up
+[(ID:5w1cor) Monday February 13 -- 12:00 PM] Activity: Isabella is baking a cake
+[(ID:2iHtV7) Monday February 13 -- 01:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:GmDqC5) Monday February 13 -- 02:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:9YBp42) Monday February 13 -- 03:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:xNrdvu) Monday February 13 -- 04:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:bKoL1Y) Monday February 13 -- 05:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:DeQovv) Monday February 13 -- 06:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:UT1ibC) Monday February 13 -- 07:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:BqpEiP) Monday February 13 -- 08:00 PM] Activity: Isabella is Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack
+[(ID:LikOL1) Monday February 13 -- 09:00 PM] Activity: Isabella is Shopping Groceries
+[(ID:pq10ZQ) Monday February 13 -- 10:00 PM] Activity: Isabella is Shopping Groceries
+
+Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up at 7:0
+
+
+Here the originally intended hourly breakdown of Isabella's schedule today: 1) wake up and complete the morning routine at 8:00 am, 2) start work from 8:15 am until 5:00 pm, 3) cook snacks for the cafe at 1:30 pm, 4) take a break in the middle of the day at 2:00-3:00pm, 5) get ready for the party at 4:00pm, 6) invite customers at 5:00pm and start celebrating Valentine's Day, 7) open the cafe from 8:00 am to 8:00 pm
+
+Given this information, please provide continuation for this prompt, giving what the fictional character Isabella is doing at that time. Just give me back a few words to continue the sentence, nothing else around that. Your awnser could for example look like this: baking a cake. Or like this: shopping groceries. 
+
+[(ID:39e2Qg) Monday February 13 -- 11:00 PM] Activity: Isabella is 
+
+~~~ output    ----------------------------------------------------
+Shopping Groceries 
+
+=== END ==========================================================
+
+
+
+
+GNS FUNCTION: <generate_task_decomp>
+DEBUG
+[['sleeping', 480], ['Shopping Groceries', 120], ['Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack', 60], ['Shopping Groceries\n[(ID:yfeQUW) Monday February 13 -- 12:00 PM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up', 60], ['baking a cake', 60], ['Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack', 60], ['Shopping Groceries', 300], ['Shopping Groceries\n(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack', 120], ['Shopping Groceries', 60], ['Shopping Groceries\n\nMonday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and packing up at 7:0', 60], ['Shopping Groceries', 60]]
+[0, 1, 2]
+index 0
+index 1
+index 2
+?????
+Describe subtasks in 5 min increments. 
+---
+Name: Kelly Bronson
+Age: 35
+Backstory: Kelly always wanted to be a teacher, and now she teaches kindergarten. During the week, she dedicates herself to her students, but on the weekends, she likes to try out new restaurants and hang out with friends. She is very warm and friendly, and loves caring for others.
+Personality: sweet, gentle, meticulous
+Location: Kelly is in an older condo that has the following areas: {kitchen, bedroom, dining, porch, office, bathroom, living room, hallway}.
+Currently: Kelly is a teacher during the school year. She teaches at the school but works on lesson plans at home. She is currently living alone in a single bedroom condo.
+Daily plan requirement: Kelly is planning to teach during the morning and work from home in the afternoon.s
+
+Today is Saturday May 10. From 08:00am ~09:00am, Kelly is planning on having breakfast, from 09:00am ~ 12:00pm, Kelly is planning on working on the next day's kindergarten lesson plan, and from 12:00 ~ 13pm, Kelly is planning on taking a break. 
+In 5 min increments, list the subtasks Kelly does when Kelly is working on the next day's kindergarten lesson plan from 09:00am ~ 12:00pm (total duration in minutes: 180):
+1) Kelly is reviewing the kindergarten curriculum standards. (duration in minutes: 15, minutes left: 165)
+2) Kelly is brainstorming ideas for the lesson. (duration in minutes: 30, minutes left: 135)
+3) Kelly is creating the lesson plan. (duration in minutes: 30, minutes left: 105)
+4) Kelly is creating materials for the lesson. (duration in minutes: 30, minutes left: 75)
+5) Kelly is taking a break. (duration in minutes: 15, minutes left: 60)
+6) Kelly is reviewing the lesson plan. (duration in minutes: 30, minutes left: 30)
+7) Kelly is making final changes to the lesson plan. (duration in minutes: 15, minutes left: 15)
+8) Kelly is printing the lesson plan. (duration in minutes: 10, minutes left: 5)
+9) Kelly is putting the lesson plan in her bag. (duration in minutes: 5, minutes left: 0)
+---
+Name: Isabella Rodriguez
+Age: 34
+Innate traits: friendly, outgoing, hospitable
+Learned traits: Isabella Rodriguez is a cafe owner of Hobbs Cafe who loves to make people feel welcome. She is always looking for ways to make the cafe a place where people can come to relax and enjoy themselves.
+Currently:  Here's the combined text of what Isabella Rodriguez is up to currently:
+"Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm. Baking a cake."
+Lifestyle: Isabella Rodriguez goes to bed around 11pm, awakes up around 6am.
+Daily plan requirement: Isabella Rodriguez opens Hobbs Cafe at 8am everyday, and works at the counter until 8pm, at which point she closes the cafe.
+Current Date: Monday February 13
+
+Today is February 13, 2023. From 00:00AM ~ 08:00AM, Isabella Rodriguez is planning on sleeping, 08:00AM ~ 10:00AM, Isabella Rodriguez is planning on Shopping Groceries, 10:00AM ~ 11:00AM, Isabella Rodriguez is planning on Shopping Groceries
+(ID:25t9eE) Monday February 13 -- 11:00 AM] Activity: Isabella is finishing up the party at Hobbs Cafe, cleaning up and pack.
+In 5 min increments, list the subtasks Isabella does when Isabella is Shopping Groceries from 08:00AM ~ 10:00AM (total duration in minutes 120): 
+1) Isabella is
+TOODOOOOOO
+ Shopping Groceries takes around 30 mins, so she needs to wake up at 7:30am.
+-==- -==- -==- 
+TOODOOOOOO
+ Shopping Groceries takes around 30 mins, so she needs to wake up at 7:30am.
+-==- -==- -==- 
+Error.
+Enter option: 
