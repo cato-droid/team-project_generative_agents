@@ -239,11 +239,15 @@ tried different models:
 -llama-chat is better than llama/vicuna in our case
 -larger models give better responses, but bigger than 7B, q4 run out of memory
 
+*communication frontend/backend
+- Milena made a box, that users can type in a task for the agents.
+-> she will work on putting that into the meta.json
 
+-read from the meta.json (in reverie.py?), run that by the llm
+and then put it into currently
 
 
 Tasks for later?
--update the user prompt, so the user can see the currently, before adding to it (context)
 -update the README.md
 - split llm from the rest of the code and run it on the ssh server
 research llama2 quantization
