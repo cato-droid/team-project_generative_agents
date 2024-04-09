@@ -1,0 +1,31 @@
+
+test failed again before it got to the simulation
+
+GNS FUNCTION: <generate_act_obj_desc>
+asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 6
+GPT4All PROMPT
+"""
+Task: We want to understand the state of an object that is being used by someone.
+
+Let's think step by step.
+We want to know about bed's state.
+Step 1. Isabella Rodriguez is at/using the sleeping.
+Step 2. Describe the bed's state: bed is
+"""
+Output the response to the prompt above in json. The output should ONLY contain the phrase that should go in <fill in>.
+Example output json:
+{"output": "being fixed"}
+Traceback (most recent call last):
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/reverie.py", line 475, in open_server
+    rs.start_server(int_count)
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/reverie.py", line 386, in start_server
+    next_tile, pronunciatio, description = persona.move(
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/persona/persona.py", line 224, in move
+    plan = self.plan(maze, personas, new_day, retrieved)
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/persona/persona.py", line 150, in plan
+    return plan(self, maze, personas, new_day, retrieved)
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/persona/cognitive_modules/plan.py", line 959, in plan                                             _determine_action(persona, maze)
+  File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/persona/cognitive_modules/plan.py", line 635, in _determine_action                                act_obj_desp = generate_act_obj_desc(act_game_object, act_desp, persona)                                                                                                          File "/home/team_project/cato/team-project_generative_agents/reverie/backend_server/persona/cognitive_modules/plan.py", line 269, in generate_act_obj_desc
+    return run_gpt_prompt_act_obj_desc(act_game_object, act_desp, persona)[0]                                                                                                       TypeError: 'NoneType' object is not subscriptable
+Error.
+Enter option:

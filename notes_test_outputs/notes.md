@@ -139,6 +139,7 @@ that doesn't really fit what we asked for
 -hundreds of post requests per second are empty?
 ->are maybe animation frames, but empty currently because animation hasn't started yet
 
+-warning because of http-site (not https) -> does that cause problems?
 
 -warning because of http-site (not https) -> does that cause problems?
 
@@ -148,6 +149,8 @@ that doesn't really fit what we asked for
 
 ->no gpu support for gpt4all yet
 -> tried to use mlcllm, but failed to run it
+-> now trying to implement llama2 with gpu
+
 
 -> now trying to implement llama2 with gpu
 -> trying to implement it with litellm
@@ -249,7 +252,6 @@ and then put it into currently
 
 Tasks for later?
 -update the README.md
-- split llm from the rest of the code and run it on the ssh server
 research llama2 quantization
 
 
