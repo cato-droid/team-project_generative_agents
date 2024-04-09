@@ -141,6 +141,7 @@ that doesn't really fit what we asked for
 
 -warning because of http-site (not https) -> does that cause problems?
 
+-warning because of http-site (not https) -> does that cause problems?
 
 
 -switch to most powerful gpt4all model possible
@@ -151,9 +152,106 @@ that doesn't really fit what we asked for
 -> now trying to implement llama2 with gpu
 
 
-Tasks for later
--switch to most powerful gpt4all model possible
--try to use gpu
-- split llm from the rest of the code and run it on the ssh server
+-> now trying to implement llama2 with gpu
+-> trying to implement it with litellm
+-> need to rum llama2/ollama on a server?
+-> how do we actually get the model and run it on a server
+so we can then access it from the gpt_structure?
+-> how did gpt4all do it?
+
+Which model?
+-> fastest one for our use case, but still needs to output
+fairly good results, or the simulation will run into errors all the time
+- the larger the model, the slower it runs but also the higher the quality of
+outputs is.
+-> trying the smallest one (llama-2-7b-chat.ggmlv3.q2_K.bin)
+https://swharden.com/blog/2023-07-29-ai-chat-locally-with-python/
+https://pypi.org/project/llama-cpp-python/
+problem: latest version of llama-cpp-python works with .gguf files,
+not with .bin files. Putting a .bin file in the model path gives:
+ValueError: Failed to load model from file: ./llama-2-7b-chat.ggmlv3.q2_K.bin
+-> fix: install older version
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
+
+
+
+use gpu:
+
+-> need to install nvidia-cuda-toolkit first
+https://github.com/abetlen/llama-cpp-python/issues/576
+worked with:
+export CMAKE_ARGS="-DLLAMA_CUBAS=on"
+export FORCE_CMAKE=1
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
+
+fix/adjust all relevant functions in gpt_structure to llama2
+-> currently error with GPT_request (always runs into exception TOKEN LIMIT EXCEEDED)
+-> fixed by commenting out gpt params
+
+Problem: privacy policy of llama2 -> model refuses to complete prompts with personal info about agents
+-> adjust prompts
+
+Now problem with tokens/context size/????? Not the whole prompt gets through, llm doesn't know what to do.
+-> how to fix?
+-> increasing context and tokens hasn't worked so far
+-when I add to the prompt input, another element at the end of the list gets lost
+-> add in the same list element to the prompt
+
+
+results of llm are still unpredictable
+->But if I give it the same input over and over again (e.g. with currently of agents),
+I get similar, kinda good results. Therfore:
+Isabella is baking a cake
+Maria is knitting a sweater and
+Klaus is watching birds
+
+-it's very hard to try to get the llm to do exactly what I want
+
+-llama almost always runs into the same problem when trying to break down the hourly schedule. It's in line 394/396 in run_gpt_prompt.py (file says something here sometimes fails... see screenshot)
+
+other error: in <generate_action_game_object>
+-problem: function before asks for an area that isabella should go into to sleep. The llm is supposed to pick one of {main room}. Instead it returns "sleeping", which then leads to this error
+
+save backend command line output to file:
+python reverie.py >&1 | tee ../../notes_test_outputs/test_28_3_24_6.txt
+
+final presentation 12.04. in the morning
+
+-try chat.lmsys.org vicuna
+-> vicuna-33b seems to be a bit better than llama2-7b-chat
+
+-struggle to find .bin models
+-13b vicuna produces out of memory error, so does the 7b v3.q8_0
+-7b v3.q2_K works, but is similarily bad than the llama we had
+
+-updated the llama-cpp-python to work with newer (.gguf) models
+-> gpu acceleration doesn't work anymore
+-tried llava-v1.6-vicuna-7b-Q4_0.gguf -> error (and response just added text/not the combined or just empty response)
+-tried vicuna-13b-v1.5-16k.Q2_K.gguf -> error (and responses are empty/ come with prefix)
+
+-> responses of models that actually run are not better than those of llama2
+-> go back to running llama2-version with gpu acceleration
+
+
+
+-> now gpu acceleration doesn't work anymore?????
+-> fixed 
+
+tried different models:
+-models other than llama/vicuna don't work (magic?)
+-llama-chat is better than llama/vicuna in our case
+-larger models give better responses, but bigger than 7B, q4 run out of memory
+
+*communication frontend/backend
+- Milena made a box, that users can type in a task for the agents.
+-> she will work on putting that into the meta.json
+
+-read from the meta.json (in reverie.py?), run that by the llm
+and then put it into currently
+
+
+Tasks for later?
+-update the README.md
+research llama2 quantization
 
 

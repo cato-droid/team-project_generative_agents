@@ -1,0 +1,17 @@
+/home/team_project/cato/team-project_generative_agents/reverie/backend_server
+Enter the name of the forked simulation: Enter the name of the new simulation: What do you want Isabella Rodriguez to be working on?: Given this text of what Isabella Rodriguez is up to currently:
+
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style:
+
+baking a cake
+
+And then give me back the combined text, that describes what Isabella Rodriguez is currently doing. Nothing else around that. Not even a greeting or a 'here is the text'.
+
+response: 
+
+
+Baking a cake.
+
+What do you want Maria Lopez to be working on?: 

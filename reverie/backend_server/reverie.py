@@ -408,6 +408,30 @@ class ReverieServer:
           with open(curr_move_file, "w") as outfile: 
             outfile.write(json.dumps(movements, indent=2))
 
+          # After the moving, if there is a user input in that step,
+          # we deal with that. FIXME
+          for persona_name, persona in self.personas.items(): 
+            user_input = (new_env[persona_name]["input"])
+
+            #load the scratch memory file for the current person
+            #TODO
+
+            # give input to llm to reformulate and include into the
+            # existing "currently"
+            currently_prompt = f"Given this text of what {persona_name} is"
+            currently_prompt += f"up to currently:\n\n" + scratch_load["currently"] #FIXME woher scratch hier???
+            currently_prompt += f"\n\nadd this to it in the same style:\n\n"
+            currently_prompt += f"{user_input}\n\nAnd then give me back"
+            currently_prompt += f" the combined text, that describes what "
+            currently_prompt += f"{persona_name} is currently doing."
+            currently_prompt += f"Nothing else around that. Not even a greeting"
+            currently_prompt += f" or a 'here is the text'.\n"
+            print(currently_prompt)
+            new_currently = ChatGPT_single_request(currently_prompt)
+            print("response: \n")
+            print(new_currently + "\n")
+            self.currently = new_currently #FIXME how to access currently here?
+
           # After this cycle, the world takes one step forward, and the 
           # current time moves by <sec_per_step> amount. 
           self.step += 1
