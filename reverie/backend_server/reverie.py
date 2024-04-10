@@ -414,12 +414,13 @@ class ReverieServer:
             user_input = (new_env[persona_name]["input"])
 
             #load the scratch memory file for the current person
-            #TODO
+            curr_scratch_file = f"{sim_folder}/personas/{persona_name}/bootstrap_memory/scratch.json"
+            scratch_load = json.load(open(curr_scratch_file))
 
             # give input to llm to reformulate and include into the
             # existing "currently"
             currently_prompt = f"Given this text of what {persona_name} is"
-            currently_prompt += f"up to currently:\n\n" + scratch_load["currently"] #FIXME woher scratch hier???
+            currently_prompt += f"up to currently:\n\n" + scratch_load["currently"]
             currently_prompt += f"\n\nadd this to it in the same style:\n\n"
             currently_prompt += f"{user_input}\n\nAnd then give me back"
             currently_prompt += f" the combined text, that describes what "
@@ -430,7 +431,11 @@ class ReverieServer:
             new_currently = ChatGPT_single_request(currently_prompt)
             print("response: \n")
             print(new_currently + "\n")
-            self.currently = new_currently #FIXME how to access currently here?
+            
+            #put the new currently in the json file
+            scratch_load['currently'] = new_currently
+            with open(curr_scratch_file, 'w') as f:
+                json.dump(scratch_load, f, indent=2)
 
           # After this cycle, the world takes one step forward, and the 
           # current time moves by <sec_per_step> amount. 

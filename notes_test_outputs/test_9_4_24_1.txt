@@ -1,0 +1,2 @@
+/home/team_project/cato/team-project_generative_agents/reverie/backend_server
+Enter the name of the forked simulation: Enter the name of the new simulation: What do you want Isabella Rodriguez to be working on?: 
