@@ -248,6 +248,24 @@ tried different models:
 
 -read from the meta.json (in reverie.py?), run that by the llm
 and then put it into currently
+-> done
+
+-renaming of llama2-test to backend-dev didn't really work?
+
+
+
+for presentation:
+
+larger model would be better, but we can't run it on the server
+
+how frontend/backend communication works/ what we did for the feature
+
+models we tried
+
+interesting errors
+
+10 Minutes structure (how the code works), 10 minutes own implementation
+
 
 
 Tasks for later?
