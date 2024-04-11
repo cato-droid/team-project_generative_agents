@@ -1,0 +1,257 @@
+-figure out how to look at the localhost of the ssh server
+
+
+Task: try to understand the code and figure out where we can interact with agents
+-> find the main code of the project, that the authors wrote themselves and inspect it.
+
+
+all simulations are saved in environment/frontend_server.
+
+-environment/frontend_server/frontend_server/urls.py has the urls,
+that we can access in the browser and what functions in view they call.
+
+-environment/frontend_server/translator/views.py
+has all the functions that make the viewable simulation
+
+-most of them call "render" at the end
+-> function from django shortcuts, that combines a given template with a given context dictionary and returns a HttpResponse object with that rendered text
+
+-update_environment sends the backend computation of the persona behavior to the frontend visual server. It does this by  reading the new movement information from "storage/movement.json" file.
+
+-we find the main backend server of reverie under reverie/backend_server as the function start_server in the class ReverieServer
+
+
+
+
+a persona's current state (memory) is saved (and loaded) into the files: spatial_memory.json, associative_memory, and scratch.json
+
+-scratch.json contains the non-permanent data associated with the persona. It takes json form when saved and moves to python variables, when we load it.
+
+
+
+
+In reverie/backend_server/persona/persona.py there is a function "plan", which conducts both the long term and short term planning for the persona
+
+-> it's acutally a whole module under .../persona/cognitive_modules/plan.py,
+separated into: generate and plan.
+
+-in there are also the prompts for the llm
+
+-long term planning (at beginning of day): generate the hourly schedule
+
+-short term planning: _determine_action creates the next action sequence for the persona. As part of this, it may need to decompose the hourly schedule.
+
+
+-If we want to ask someone to give instructions to an agent: how can we give those instructions to the agent? Where do we add them to their memory/schedule?
+
+
+'''-> persona.scratch.f_daily_schedule is the daily schedule, an agent works on and that gets edited in plan.py
+"# Based on the daily_req, we create an hourly schedule for the persona, 
+# which is a list of todo items with a time duration (in minutes) that 
+# add up to 24 hours"
+-persona.scratch.add_new_action adds a new action to the personas queue
+-> too specific, actions get added after beeing broken down, we won't be able to directly insert here'''
+
+
+Giving instructions to an agent at the beginning of the simulation: try to edit the scratch.json of that persona in the newly created sim-folder
+-> in reverie.py when the simulation gets set up, a new sim folder with a copy of the forked simulation gets created.
+-In line 183 of scratch.py, the "currently" of the scratch.json gets loaded.
+-> we can add stuff to do for the character here.
+
+
+idea: command line prompts for orders to the personas:
+see mindmap
+
+
+
+AFTER EXAMS:
+
+
+-self.name, .age, .innate, .learned, .currently, .lifestyle, and  .daily_plan_req are all strings we can theoretically just add stuff to.
+
+added prompt for every person, so the user can give them tasks.
+(inspired by prompts in plan.py)
+The prompt and the current status of the person then gets fed to the llm for it to make a new entry for currently.
+-> That doesn't totally work at the moment. The output the llm gives, doesn't match the previous style from entries in currently. It's somehow cut off and doesn't always include everything we want (maybe bc it's cut off). Sometimes it's also not only the stuff we asked for/not in 3rd person/ ...
+-> see e.g. in tests_04_03_2024 - tests_6_3_24
+-also: do we want to replace the currently from before, so the agent is only currently working on the task given by the user?
+
+FIXME
+
+trying to run the simulation on the remote server from haoyu:
+-ssh -L gives: channel 3: open failed: connect failed: Connection refused
+-> solution: add specific url after runserver that can be accessed from outside:
+https://docs.djangoproject.com/en/1.11/ref/django-admin/#runserver
+python manage.py runserver 134.2.56.203:8000
+-that ip needs to be added to ALLOWED_HOSTS in the Django settings
+
+-problem that still occurs: we can only load the simulator_home once. Refreshing the page after the simulation has started, gives us:
+Please start the backend first. 
+(which is already running)
+-> backend gets somehow stopped by that request (doesn't terminate, but gets "stuck" -> no further computations/prompts)
+-> also if we look at the output of the frontend server: a HTTP GET stops the HTTP POSTs:
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:26] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "GET /simulator_home HTTP/1.1" 200 1374
+-> here I refreshed the simulator_home
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:27] "POST /update_environment/ HTTP/1.1" 200 14
+[06/Mar/2024 16:01:33] "GET /simulator_home HTTP/1.1" 200 1374
+[06/Mar/2024 16:01:45] "GET /simulator_home HTTP/1.1" 200 1374
+-> refreshing the simulator home again two times
+-> no more POSTs
+
+-> fixed by commenting out the line:
+os.remove(f_curr_step) from views.py
+-> now we can refresh the page, look at agents and go back to the
+still viewable simulator_home
+
+
+-with the updated currently, it got an error when trying to build the emojis for something Isabella is doing
+-> stops there
+-we haven't yet gotten to the point where the actual simulation started
+-> try how far it runs with the old currently by running it overnight
+-> problem: runs into errors most of the time because of something the llm put out,
+that doesn't really fit what we asked for
+
+-hundreds of post requests per second are empty?
+->are maybe animation frames, but empty currently because animation hasn't started yet
+
+-warning because of http-site (not https) -> does that cause problems?
+
+-warning because of http-site (not https) -> does that cause problems?
+
+
+-switch to most powerful gpt4all model possible
+-try to use gpu
+
+->no gpu support for gpt4all yet
+-> tried to use mlcllm, but failed to run it
+-> now trying to implement llama2 with gpu
+
+
+-> now trying to implement llama2 with gpu
+-> trying to implement it with litellm
+-> need to rum llama2/ollama on a server?
+-> how do we actually get the model and run it on a server
+so we can then access it from the gpt_structure?
+-> how did gpt4all do it?
+
+Which model?
+-> fastest one for our use case, but still needs to output
+fairly good results, or the simulation will run into errors all the time
+- the larger the model, the slower it runs but also the higher the quality of
+outputs is.
+-> trying the smallest one (llama-2-7b-chat.ggmlv3.q2_K.bin)
+https://swharden.com/blog/2023-07-29-ai-chat-locally-with-python/
+https://pypi.org/project/llama-cpp-python/
+problem: latest version of llama-cpp-python works with .gguf files,
+not with .bin files. Putting a .bin file in the model path gives:
+ValueError: Failed to load model from file: ./llama-2-7b-chat.ggmlv3.q2_K.bin
+-> fix: install older version
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
+
+
+
+use gpu:
+
+-> need to install nvidia-cuda-toolkit first
+https://github.com/abetlen/llama-cpp-python/issues/576
+worked with:
+export CMAKE_ARGS="-DLLAMA_CUBAS=on"
+export FORCE_CMAKE=1
+pip install llama-cpp-python==0.1.65 --force-reinstall --upgrade --no-cache-dir
+
+fix/adjust all relevant functions in gpt_structure to llama2
+-> currently error with GPT_request (always runs into exception TOKEN LIMIT EXCEEDED)
+-> fixed by commenting out gpt params
+
+Problem: privacy policy of llama2 -> model refuses to complete prompts with personal info about agents
+-> adjust prompts
+
+Now problem with tokens/context size/????? Not the whole prompt gets through, llm doesn't know what to do.
+-> how to fix?
+-> increasing context and tokens hasn't worked so far
+-when I add to the prompt input, another element at the end of the list gets lost
+-> add in the same list element to the prompt
+
+
+results of llm are still unpredictable
+->But if I give it the same input over and over again (e.g. with currently of agents),
+I get similar, kinda good results. Therfore:
+Isabella is baking a cake
+Maria is knitting a sweater and
+Klaus is watching birds
+
+-it's very hard to try to get the llm to do exactly what I want
+
+-llama almost always runs into the same problem when trying to break down the hourly schedule. It's in line 394/396 in run_gpt_prompt.py (file says something here sometimes fails... see screenshot)
+
+other error: in <generate_action_game_object>
+-problem: function before asks for an area that isabella should go into to sleep. The llm is supposed to pick one of {main room}. Instead it returns "sleeping", which then leads to this error
+
+save backend command line output to file:
+python reverie.py >&1 | tee ../../notes_test_outputs/test_28_3_24_6.txt
+
+final presentation 12.04. in the morning
+
+-try chat.lmsys.org vicuna
+-> vicuna-33b seems to be a bit better than llama2-7b-chat
+
+-struggle to find .bin models
+-13b vicuna produces out of memory error, so does the 7b v3.q8_0
+-7b v3.q2_K works, but is similarily bad than the llama we had
+
+-updated the llama-cpp-python to work with newer (.gguf) models
+-> gpu acceleration doesn't work anymore
+-tried llava-v1.6-vicuna-7b-Q4_0.gguf -> error (and response just added text/not the combined or just empty response)
+-tried vicuna-13b-v1.5-16k.Q2_K.gguf -> error (and responses are empty/ come with prefix)
+
+-> responses of models that actually run are not better than those of llama2
+-> go back to running llama2-version with gpu acceleration
+
+
+
+-> now gpu acceleration doesn't work anymore?????
+-> fixed 
+
+tried different models:
+-models other than llama/vicuna don't work (magic?)
+-llama-chat is better than llama/vicuna in our case
+-larger models give better responses, but bigger than 7B, q4 run out of memory
+
+*communication frontend/backend
+- Milena made a box, that users can type in a task for the agents.
+-> she will work on putting that into the meta.json
+
+-read from the meta.json (in reverie.py?), run that by the llm
+and then put it into currently
+
+
+Tasks for later?
+-update the README.md
+research llama2 quantization
+
+

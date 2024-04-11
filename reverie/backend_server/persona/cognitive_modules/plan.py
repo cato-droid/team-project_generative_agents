@@ -440,9 +440,9 @@ def revise_identity(persona):
   currently_prompt += f"If there is any scheduling information, be as specific as possible (include date, time, and location if stated in the statement).\n\n"
   currently_prompt += "Follow this format below:\nStatus: <new status>"
   # print ("DEBUG ;adjhfno;asdjao;asdfsidfjo;af", p_name)
-  # print (currently_prompt)
+  print (currently_prompt) #FIXME commented in
   new_currently = ChatGPT_single_request(currently_prompt)
-  # print (new_currently)
+  print (new_currently) #FIXME commented in 
   # print (new_currently[10:])
 
   persona.scratch.currently = new_currently

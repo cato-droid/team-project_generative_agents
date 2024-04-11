@@ -122,10 +122,17 @@ class ReverieServer:
     init_env_file = f"{sim_folder}/environment/{str(self.step)}.json"
     init_env = json.load(open(init_env_file))
     for persona_name in reverie_meta['persona_names']: 
+
+      #FIXME add prompt for every persona to add stuff to their "currently"
+      currently_input = input("What do you want " + persona_name +" to be working on?: ").strip()
+
+
       persona_folder = f"{sim_folder}/personas/{persona_name}"
       p_x = init_env[persona_name]["x"]
       p_y = init_env[persona_name]["y"]
-      curr_persona = Persona(persona_name, persona_folder)
+
+      #FIXME here we give the stuff to add to currently to the Persona
+      curr_persona = Persona(persona_name, currently_input, persona_folder)
 
       self.personas[persona_name] = curr_persona
       self.personas_tile[persona_name] = (p_x, p_y)
@@ -400,6 +407,35 @@ class ReverieServer:
           curr_move_file = f"{sim_folder}/movement/{self.step}.json"
           with open(curr_move_file, "w") as outfile: 
             outfile.write(json.dumps(movements, indent=2))
+
+          # After the moving, if there is a user input in that step,
+          # we deal with that. FIXME
+          for persona_name, persona in self.personas.items(): 
+            user_input = (new_env[persona_name]["input"])
+
+            #load the scratch memory file for the current person
+            curr_scratch_file = f"{sim_folder}/personas/{persona_name}/bootstrap_memory/scratch.json"
+            scratch_load = json.load(open(curr_scratch_file))
+
+            # give input to llm to reformulate and include into the
+            # existing "currently"
+            currently_prompt = f"Given this text of what {persona_name} is"
+            currently_prompt += f"up to currently:\n\n" + scratch_load["currently"]
+            currently_prompt += f"\n\nadd this to it in the same style:\n\n"
+            currently_prompt += f"{user_input}\n\nAnd then give me back"
+            currently_prompt += f" the combined text, that describes what "
+            currently_prompt += f"{persona_name} is currently doing."
+            currently_prompt += f"Nothing else around that. Not even a greeting"
+            currently_prompt += f" or a 'here is the text'.\n"
+            print(currently_prompt)
+            new_currently = ChatGPT_single_request(currently_prompt)
+            print("response: \n")
+            print(new_currently + "\n")
+            
+            #put the new currently in the json file
+            scratch_load['currently'] = new_currently
+            with open(curr_scratch_file, 'w') as f:
+                json.dump(scratch_load, f, indent=2)
 
           # After this cycle, the world takes one step forward, and the 
           # current time moves by <sec_per_step> amount. 

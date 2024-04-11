@@ -39,6 +39,16 @@ Replace `<name>` with your name.
 ### Step 2. Install requirements.txt
 Install everything listed in the `requirements.txt` file (I strongly recommend first setting up a virtualenv as usual). A note on Python version: we tested our environment on Python 3.9.12. 
 
+### Step 3. download a llama model you want to use
+Download a llama-model you want to use into
+reverie/backend/persona/prompt_template/llama-models
+for example
+```wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q2_K.bin```
+and then add its path/name in the 
+reverie/backend/persona/prompt_template/gpt_structure.py 
+
+
+
 ## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Klaus_Mueller.png" alt="Generative Klaus">   Running a Simulation 
 To run a new simulation, you will need to concurrently start two servers: the environment server and the agent simulation server.
 

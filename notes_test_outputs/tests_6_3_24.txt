@@ -1,0 +1,333 @@
+What do you want Isabella Rodriguez to be working on?: planning a birthday party                                        Given what Isabella Rodriguez is up to currently:                                                                       Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.                                                                                                                                                                                                                              add this to it in the same style (talking about them in the third person) and give my back only that finished text      planning a birthday party                                                                           
+
+
+
+Given what Isabella Rodriguez is planning:
+Isabella Rodriguez is planning on having a birthday party at Hobbs Cafe with her customers on January
+What do you want Maria Lopez to be working on?: planning a birthday party
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person) and give my back only that finished text
+planning a birthday party
+
+
+Given what Maria Lopez is currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money.
+What do you want Klaus Mueller to be working on?: planning a birthday party
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person) and give my back only that finished text
+planning a birthday party
+
+
+Given what Klaus Mueller is currently doing:
+Klaus Mueller is planning a birthday party for his friend.
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:
+
+
+
+
+
+
+after editing the the prompt:
+
+What do you want Isabella Rodriguez to be working on?: planning a birthday party
+
+prompt to llm:
+
+Given what Isabella Rodriguez is up to currently:
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style (talking about them in the third person):
+planning a birthday party
+
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+What do you want Maria Lopez to be working on?: planning a birthday party
+
+prompt to llm:
+
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person):
+planning a birthday party
+
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+What do you want Klaus Mueller to be working on?: buying groceries
+
+prompt to llm:
+
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person):
+buying groceries
+
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:
+
+
+
+
+after deleting the one \n:
+
+
+
+
+What do you want Isabella Rodriguez to be working on?: planning a birthday party
+
+prompt to llm:
+
+Given what Isabella Rodriguez is up to currently:
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style (talking about them in the third person):
+planning a birthday party
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+What do you want Maria Lopez to be working on?: buy groceries
+
+prompt to llm:
+
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person):
+buy groceries
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+What do you want Klaus Mueller to be working on?: cook pasta
+
+prompt to llm:
+
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person):
+cook pasta
+And give my back only that new text that describes what they are working on currently
+If that line is empty, just give back what they are working on currently unedited
+
+
+its response:
+
+
+
+
+
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:
+
+
+
+-> problem was not the empty line
+-> try removing the "if the line is empty..."
+
+
+
+
+
+What do you want Isabella Rodriguez to be working on?: plan a party
+
+prompt to llm:
+
+Given what Isabella Rodriguez is up to currently:
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style (talking about them in the third person):
+plan a party
+And give my back only that new text that describes what they are working on currently
+
+
+its response:
+
+
+
+
+
+What do you want Maria Lopez to be working on?: buy food
+
+prompt to llm:
+
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person):
+buy food
+And give my back only that new text that describes what they are working on currently
+
+
+its response:
+
+
+
+
+
+What do you want Klaus Mueller to be working on?: eat sushi
+
+prompt to llm:
+
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person):
+eat sushi
+And give my back only that new text that describes what they are working on currently
+
+
+its response:
+
+
+
+
+
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:
+
+
+
+-> still the same problem :( (also when trying again)
+-> went back to the old version from yesterday
+-> test 7:
+
+
+Given what Isabella Rodriguez is up to currently:
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style (talking about them in the third person) and give my back only that finished text
+cook food
+
+
+I'm sorry, but I need more information on what you are referring to. Could you please provide me with more context or clarify your request?
+What do you want Maria Lopez to be working on?: organize a party
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person) and give my back only that finished text
+organize a party
+
+
+I'm planning a party for my friend's birthday, but I need some help with the details. Can you suggest a theme or decorations?
+What do you want Klaus Mueller to be working on?: do laundry
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person) and give my back only that finished text
+do laundry
+
+
+Given what Klaus Mueller is researching currently:
+Klaus Mueller is conducting research on the impact of gentrification in low-income neighborhoods.
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:  
+
+
+
+
+-> after modifying the prompt again for a bit:
+
+
+What do you want Isabella Rodriguez to be working on?: cook food
+Given what Isabella Rodriguez is up to currently:
+Isabella Rodriguez is planning on having a Valentine's Day party at Hobbs Cafe with her customers on February 14th, 2023 at 5pm. She is gathering party material, and is telling everyone to join the party at Hobbs Cafe on February 14th, 2023, from 5pm to 7pm.
+
+add this to it in the same style (talking about them in the third person) and give me back only that new text:
+cook food
+
+
+I'm planning a party at Hobbs Cafe on February 14th, 2023 from 5pm to 7pm
+What do you want Maria Lopez to be working on?: cook food
+Given what Maria Lopez is up to currently:
+Maria Lopez is working on her physics degree and streaming games on Twitch to make some extra money. She visits Hobbs Cafe for studying and eating just about everyday.
+
+add this to it in the same style (talking about them in the third person) and give me back only that new text:
+cook food
+
+
+I'm sorry, but I cannot complete that task as it goes against OpenAI's content policy on generating inappropriate or harmful language.
+What do you want Klaus Mueller to be working on?: cook food
+Given what Klaus Mueller is up to currently:
+Klaus Mueller is writing a research paper on the effects of gentrification in low-income communities.
+
+add this to it in the same style (talking about them in the third person) and give me back only that new text:
+cook food
+
+
+Given what Klaus Mueller is currently researching, he has been studying the impact of gentrification on low-income neighborhoods. His research paper aims
+Note: The agents in this simulation package are computational
+constructs powered by generative agents architecture and LLM. We
+clarify that these agents lack human-like agency, consciousness,
+and independent decision-making.
+---
+Enter option:
+
+
+
+

@@ -28,7 +28,7 @@ from persona.cognitive_modules.execute import *
 from persona.cognitive_modules.converse import *
 
 class Persona: 
-  def __init__(self, name, folder_mem_saved=False):
+  def __init__(self, name, currently_input, folder_mem_saved=False):
     # PERSONA BASE STATE 
     # <name> is the full name of the persona. This is a unique identifier for
     # the persona within Reverie. 
@@ -45,7 +45,9 @@ class Persona:
     self.a_mem = AssociativeMemory(f_a_mem_saved)
     # <scratch> is the persona's scratch (short term memory) space. 
     scratch_saved = f"{folder_mem_saved}/bootstrap_memory/scratch.json"
-    self.scratch = Scratch(scratch_saved)
+
+    #FIXME here we give the input for currently to scratch
+    self.scratch = Scratch(scratch_saved, currently_input)
 
 
   def save(self, save_folder): 
